@@ -1,0 +1,59 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Assistant", sans-serif;
+}
+
+body {
+  font-weight: 300;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+main {
+  margin-top: 60px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--text-color);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.job,
+.education {
+  margin-bottom: 1.5rem;
+}

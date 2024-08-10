@@ -1,0 +1,113 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Assistant", sans-serif;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  height: 5rem;
+  background-color: var(--nav-color);
+  border-bottom: 0.1px solid #101010;
+}
+
+.menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0.4rem;
+  top: 50%;
+  cursor: pointer;
+  transform: translateY(-50%);
+  z-index: 1001;
+}
+
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: var(--text-color);
+  stroke-width: 5.5;
+  stroke-linecap: butt;
+}
+
+.ham1 .top {
+  stroke-dasharray: 40 139;
+}
+
+.ham1 .bottom {
+  stroke-dasharray: 40 180;
+}
+
+.ham1.active .top {
+  stroke-dashoffset: -98px;
+}
+
+.ham1.active .bottom {
+  stroke-dashoffset: -138px;
+}
+
+ul.menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  list-style-type: none;
+  margin: 1px 0;
+  padding: 0;
+  background-color: var(--nav-transparent);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+
+ul.open {
+  max-height: 500px;
+  padding: 1rem 0;
+}
+
+ul.closed {
+  max-height: 0;
+  padding: 0;
+}
+
+li {
+  width: 100%;
+  margin: 0.4rem 0;
+}
+
+.nav-list {
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.nav-item {
+  font-size: 1.6rem;
+  display: inline-block;
+  width: 100%;
+  padding: 0 1rem;
+}
