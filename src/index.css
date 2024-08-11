@@ -8,11 +8,11 @@
   -moz-osx-font-smoothing: grayscale;
 
   --bg-color: #030303;
-  --nav-color: #070707;
-  --nav-transparent: rgba(7, 7, 7, 0.99);
+  --nav-color: #300404;
+  --nav-transparent: rgba(48, 4, 4, 0.99);
   --border-color: #101010;
   --text-color: #f0f0f0;
-  --accent-color: #bd0000;
+  --accent-color: #df750a;
 }
 
 a {

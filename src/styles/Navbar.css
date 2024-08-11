@@ -18,7 +18,7 @@ nav {
   z-index: 1000;
   height: 5rem;
   background-color: var(--nav-color);
-  border-bottom: 0.1px solid #101010;
+  border-bottom: 0.1px solid #4f0707;
 }
 
 .menu-icon {
@@ -36,7 +36,7 @@ nav {
 .ham {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  transition: transform 400ms;
+  transition: transform 500ms;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -49,7 +49,7 @@ nav {
 
 .line {
   fill: none;
-  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  transition: stroke-dasharray 500ms, stroke-dashoffset 500ms;
   stroke: var(--text-color);
   stroke-width: 5.5;
   stroke-linecap: butt;
