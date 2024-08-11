@@ -1,3 +1,11 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .parallax {
   height: 100vh;
   position: relative;
@@ -21,10 +29,30 @@
   padding: 0;
 }
 
-.content p {
+.typewriterContainer {
   font-size: 1.5rem;
   margin: 10px 0 0;
   padding: 0;
+  height: 1.5em;
+  line-height: 1.5em;
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 0.15em solid var(--text-color);
+  white-space: nowrap;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--text-color);
+  }
 }
 
 .parallax::before {
