@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import HeaderImage from "../assets/header.jpg";
 import ScrollDown from "./ScrollDown";
 import "../styles/Header.css";
