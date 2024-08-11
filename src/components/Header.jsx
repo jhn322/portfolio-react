@@ -6,8 +6,9 @@ import "../styles/Header.css";
 const Header = () => {
   const phrases = [
     "Web Developer",
-    "UI/UX Interested",
-    "Media Server Enthusiast",
+    "Media Enthusiast",
+    "Photo & Video Editing",
+    "Linux & Docker",
   ];
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
@@ -49,7 +50,9 @@ const Header = () => {
   return (
     <header id="home" className="parallax" style={parallaxStyle}>
       <div className="content">
-        <h1>Johan Söderlund</h1>
+        <h1 className="name">
+          Johan <span>Söderlund</span>
+        </h1>
         <p className="typewriterContainer">
           <span className="typewriter">{displayedText}</span>
         </p>

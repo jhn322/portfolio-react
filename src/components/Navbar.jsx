@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/Navbar.css";
 
-function Navbar() {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -45,8 +45,8 @@ function Navbar() {
           </a>
         </li>
         <li className="nav-list">
-          <a href="#education" className="nav-item">
-            Education
+          <a href="#workEducation" className="nav-item">
+            Work & Education
           </a>
         </li>
         <li className="nav-list">
@@ -62,6 +62,6 @@ function Navbar() {
       </ul>
     </nav>
   );
-}
+};
 
 export default Navbar;
