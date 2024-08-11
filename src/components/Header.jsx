@@ -47,7 +47,7 @@ const Header = () => {
   };
 
   return (
-    <header className="parallax" style={parallaxStyle}>
+    <header id="home" className="parallax" style={parallaxStyle}>
       <div className="content">
         <h1>Johan Söderlund</h1>
         <p className="typewriterContainer">

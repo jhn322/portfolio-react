@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
-import Home from "./components/Home";
 import About from "./components/About";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
@@ -16,7 +15,6 @@ function App() {
       <Navbar />
       <Header />
       <main>
-        <Home />
         <About />
         <Experience />
         <Education />
