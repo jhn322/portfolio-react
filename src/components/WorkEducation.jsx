@@ -5,7 +5,7 @@ const WorkEducation = () => {
   return (
     <div className="workEducation">
       <section id="workEducation">
-        <h2 className="title">Work Experience</h2>
+        <h2 className="workTitle">Work Experience</h2>
         <div className="job">
           <h3>Lokalvårdare Vikarie</h3>
           <p>Umeå Städservice | 2015 - Present</p>
@@ -25,7 +25,7 @@ const WorkEducation = () => {
       </section>
 
       <section id="workEducation">
-        <h2 className="title">Education</h2>
+        <h2 className="educationTitle">Education</h2>
         <div className="education">
           <h3>Fullstack JavaScript Extended </h3>
           <p>Chas Academy | 2023 - 2025</p>

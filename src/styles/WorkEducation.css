@@ -10,6 +10,11 @@
   padding: 2rem 1rem;
 }
 
+.workTitle,
+.educationTitle {
+  font-size: 2rem;
+}
+
 .last {
   margin-bottom: 2rem;
 }

@@ -20,10 +20,6 @@
   margin-bottom: -0.4rem;
 }
 
-.about {
-  font-size: 3rem;
-}
-
 .main {
   font-size: 1.15rem;
 }
@@ -60,6 +56,15 @@
 
 .value {
   text-align: left;
+}
+
+.email {
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.email:hover {
+  color: var(--accent-color);
 }
 
 .buttons {

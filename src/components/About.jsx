@@ -1,4 +1,5 @@
 import React from "react";
+import { RxExternalLink } from "react-icons/rx";
 import "../styles/About.css";
 
 // Calculate my age
@@ -18,13 +19,17 @@ const calculateAge = (birthDate) => {
   return age;
 };
 
+const handleEmailClick = () => {
+  window.location.href = `mailto:johan.soderlund96@gmail.com`;
+};
+
 const About = () => {
   const age = calculateAge("1996-05-02");
 
   return (
     <section className="container" id="about">
       <div className="aboutMe">
-        <h2 className="about">About Me</h2>
+        <h2>About Me</h2>
         <p className="main">Main information about me</p>
       </div>
       <article className="information">
@@ -49,13 +54,16 @@ const About = () => {
             </li>
             <li className="infoItem">
               <span className="label">Hobbies:</span>
-              <span className="value">
-                Tech, TV, Movies, Gaming, Servers, Music
-              </span>
+              <span className="value">Tech, TV, Gaming, Servers, Music</span>
             </li>
             <li className="infoItem">
-              <span className="label">Mail:</span>
-              <span className="value">johan.soderlund96@gmail.com</span>
+              <span className="label">Email:</span>
+              <span className="value email" onClick={handleEmailClick}>
+                johan.soderlund96@gmail.com
+                <RxExternalLink
+                  style={{ marginLeft: "0.5rem", verticalAlign: "middle" }}
+                />
+              </span>
             </li>
             <li className="infoItem">
               <span className="label">Phone:</span>
