@@ -4,17 +4,17 @@ import "../styles/Experience.css";
 const getCurrentYear = () => new Date().getFullYear();
 
 const experiences = [
-  { skill: "Sony Vegas", startYear: 2011 },
-  { skill: "Photoshop", startYear: 2011 },
-  { skill: "Linux", startYear: 2018 },
-  { skill: "Docker", startYear: 2020 },
-  { skill: "Kometa", startYear: 2021 },
   { skill: "HTML & CSS", startYear: 2023 },
   { skill: "GIT", startYear: 2023 },
   { skill: "Javascript", startYear: 2023 },
   { skill: "TypeScript", startYear: 2023 },
   { skill: "React", startYear: 2024 },
   { skill: "Node.JS", startYear: 2024 },
+  { skill: "Docker", startYear: 2020 },
+  { skill: "Photoshop", startYear: 2011 },
+  { skill: "Linux", startYear: 2018 },
+  { skill: "Kometa", startYear: 2021 },
+  { skill: "Sony Vegas", startYear: 2011 },
 ];
 
 const Experience = () => {
@@ -51,22 +51,43 @@ const Experience = () => {
     };
   }, []);
 
-  const calculatePercentage = (index, skill) => {
-    if (index >= 3) {
-      return 85 - (index - 3);
-    }
-
-    const years = currentYear - experiences[index].startYear;
-    const maxYears = Math.max(
-      ...experiences.slice(0, 3).map((exp) => currentYear - exp.startYear)
-    );
-    return Math.round(80 + (years / maxYears) * 19);
+  const skillPriority = {
+    "HTML & CSS": 4,
+    GIT: 3,
+    Javascript: 2,
+    TypeScript: 1,
+    React: 1,
+    "Node.JS": 0,
   };
 
-  const updatedExperiences = experiences.map((exp, index) => ({
+  const calculatePercentage = (yearsOfExperience, skill) => {
+    const maxExperience = 13;
+    const minExperience = 0;
+
+    const baseExperienceFactor = skill in skillPriority ? 75 : 80;
+
+    let percentage = Math.round(
+      baseExperienceFactor +
+        ((yearsOfExperience - minExperience) /
+          (maxExperience - minExperience)) *
+          19
+    );
+
+    if (skill in skillPriority) {
+      percentage += skillPriority[skill];
+    }
+
+    if (skill === "Node.JS") {
+      percentage -= 1;
+    }
+
+    return Math.min(percentage, 99);
+  };
+
+  const updatedExperiences = experiences.map((exp) => ({
     ...exp,
     years: currentYear - exp.startYear,
-    percentage: calculatePercentage(index, exp.skill),
+    percentage: calculatePercentage(currentYear - exp.startYear, exp.skill),
   }));
 
   return (
