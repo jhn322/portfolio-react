@@ -4,11 +4,11 @@ import "../styles/Experience.css";
 const getCurrentYear = () => new Date().getFullYear();
 
 const experiences = [
-  { skill: "HTML & CSS", startYear: 2023 },
-  { skill: "GIT", startYear: 2023 },
-  { skill: "Javascript", startYear: 2023 },
-  { skill: "TypeScript", startYear: 2023 },
   { skill: "React", startYear: 2024 },
+  { skill: "GIT", startYear: 2023 },
+  { skill: "TypeScript", startYear: 2023 },
+  { skill: "Javascript", startYear: 2023 },
+  { skill: "HTML & CSS", startYear: 2023 },
   { skill: "Node.JS", startYear: 2024 },
   { skill: "Docker", startYear: 2020 },
   { skill: "Photoshop", startYear: 2011 },
