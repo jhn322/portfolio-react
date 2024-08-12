@@ -64,7 +64,7 @@ const Contact = () => {
         <h2>Contact Me</h2>
         <p className="main">Get in touch with me</p>
       </div>
-      <div className="infoContainer">
+      <article className="infoContainer">
         <h3 className="infoTitle">My Information</h3>
         <ul className="infoList">
           <li className="infoItem">
@@ -85,7 +85,7 @@ const Contact = () => {
             <span className="value">073 - 029 33 92</span>
           </li>
         </ul>
-      </div>
+      </article>
       <form onSubmit={handleSubmit}>
         <div className="formInput">
           <input
