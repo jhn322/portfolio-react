@@ -38,7 +38,7 @@
   right: 0;
   bottom: 0;
   height: 6px;
-  background: linear-gradient(90deg, #cb0000, #bd6212, #cb0000);
+  background: linear-gradient(90deg, #cb0000, #bd6212, #cb0000, #cb0000);
   background-size: 200% 100%;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -46,7 +46,7 @@
 
 .projectCard:hover::after {
   opacity: 1;
-  animation: neonGlow 3s linear infinite;
+  animation: neonGlow 2s linear infinite;
 }
 
 .projectCard.visible {
