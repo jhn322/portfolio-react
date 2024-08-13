@@ -48,7 +48,7 @@ const Projects = () => {
     {
       title: "The Dashboard",
       description:
-        "A dashboard for saving links, the weather and writing down notes quickly.",
+        "A dashboard for bookmarking links, looking up the weather and writing down notes quickly.",
       imageUrl: project3,
       tags: ["Javascript", "CSS", "API"],
       githubLink: "https://github.com/jhn322/dashboard-frontend",
