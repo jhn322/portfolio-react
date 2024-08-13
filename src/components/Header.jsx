@@ -8,7 +8,7 @@ const Header = () => {
     "Web Developer",
     "Media Enthusiast",
     "Photo & Video Editing",
-    "Linux & Docker Exploring",
+    "Linux & Docker Deployment",
   ];
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
