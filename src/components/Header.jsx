@@ -10,6 +10,7 @@ const Header = () => {
     "Photo & Video Editing",
     "Linux & Docker Deployment",
   ];
+
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -38,7 +39,6 @@ const Header = () => {
 
     return () => clearTimeout(timer);
   }, [displayedText, currentPhraseIndex, isDeleting]);
-
   const parallaxStyle = {
     backgroundImage: `url(${HeaderImage})`,
     backgroundAttachment: "fixed",

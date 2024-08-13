@@ -24,14 +24,19 @@ const ProjectCard = ({
   };
 
   return (
-    <div
+    <article
       className="projectCard"
       ref={cardRef}
       onClick={handleClick}
       role="button"
       tabIndex={0}
+      aria-label={`View project: ${title}`}
     >
-      <img src={imageUrl} alt={title} className="projectImage" />
+      <img
+        src={imageUrl}
+        alt={`Screenshot of ${title}`}
+        className="projectImage"
+      />
       <div className="projectContent">
         <h3 className="projectTitle">{title}</h3>
         <p className="projectDescription">{description}</p>
@@ -55,7 +60,7 @@ const ProjectCard = ({
           </a>
         )}
       </div>
-    </div>
+    </article>
   );
 };
 
@@ -80,9 +85,9 @@ const Projects = () => {
     });
 
     return () => {
-      if (projectRefs.current) {
-        projectRefs.current.forEach((ref) => observer.unobserve(ref));
-      }
+      projectRefs.current.forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
     };
   }, []);
 
@@ -110,14 +115,14 @@ const Projects = () => {
       description:
         "A dashboard for bookmarking links, looking up the weather and writing down notes quickly.",
       imageUrl: project3,
-      tags: ["Javascript", "CSS", "API"],
+      tags: ["JavaScript", "CSS", "API"],
       viewProject: "https://jhn-dashboard.netlify.app/",
       codeLink: "https://github.com/jhn322/dashboard-frontend",
     },
     {
       title: "Kometa Config",
       description:
-        "My config to a powerful python tool designed to give you complete control over your media libraries.",
+        "My config for a powerful Python tool designed to give you complete control over your media libraries.",
       imageUrl: project4,
       tags: ["Python", "Docker", "YAML"],
       viewProject: "https://kometa.wiki/en/latest/",
@@ -126,12 +131,12 @@ const Projects = () => {
   ];
 
   return (
-    <div id="projects" className="projectsWrapper">
+    <section id="projects" className="projectsWrapper">
       <div className="meExperience">
-        <div className="me">
+        <header className="me">
           <h2>Projects</h2>
           <p className="main">Take a look at my portfolio</p>
-        </div>
+        </header>
       </div>
       <div className="projectsContainer">
         {projects.map((project, index) => (
@@ -142,7 +147,7 @@ const Projects = () => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -73,37 +73,40 @@ const Contact = () => {
 
   return (
     <section id="contact">
-      <div className="me">
+      <header className="me">
         <h2>Contact Me</h2>
         <p className="main">Get in touch with me</p>
-      </div>
-      <div className="innerInfo">
+      </header>
+      <main className="innerInfo">
         <article className="infoContainer">
           <h3 className="infoTitle">My Information</h3>
-          <ul className="infoList">
-            <li className="infoItem">
-              <span className="label">Address:</span>
-              <span className="value">Umeå, Sweden</span>
-            </li>
-            <li className="infoItem">
-              <span className="label">Email:</span>
-              <span
-                className="value email"
-                onClick={() =>
-                  (window.location.href = "mailto:johan.soderlund96@gmail.com")
-                }
-              >
-                johan.soderlund96@gmail.com
-                <RxExternalLink
-                  style={{ marginLeft: "0.5rem", verticalAlign: "middle" }}
-                />
-              </span>
-            </li>
-            <li className="infoItem">
-              <span className="label">Phone:</span>
-              <span className="value">073 - 029 33 92</span>
-            </li>
-          </ul>
+          <address>
+            <ul className="infoList">
+              <li className="infoItem">
+                <span className="label">Address:</span>
+                <span className="value">Umeå, Sweden</span>
+              </li>
+              <li className="infoItem">
+                <span className="label">Email:</span>
+                <span
+                  className="value email"
+                  onClick={() =>
+                    (window.location.href =
+                      "mailto:johan.soderlund96@gmail.com")
+                  }
+                >
+                  johan.soderlund96@gmail.com
+                  <RxExternalLink
+                    style={{ marginLeft: "0.5rem", verticalAlign: "middle" }}
+                  />
+                </span>
+              </li>
+              <li className="infoItem">
+                <span className="label">Phone:</span>
+                <span className="value">073 - 029 33 92</span>
+              </li>
+            </ul>
+          </address>
         </article>
         <form onSubmit={handleSubmit}>
           <div className="formInput">
@@ -114,6 +117,7 @@ const Contact = () => {
               placeholder="Your Name"
               value={formData.name}
               onChange={handleChange}
+              aria-label="Your Name"
               required
             />
           </div>
@@ -125,6 +129,7 @@ const Contact = () => {
               placeholder="Your Email"
               value={formData.email}
               onChange={handleChange}
+              aria-label="Your Email"
               required
             />
           </div>
@@ -135,6 +140,7 @@ const Contact = () => {
               placeholder="Your Message"
               value={formData.message}
               onChange={handleChange}
+              aria-label="Your Message"
               required
             ></textarea>
           </div>
@@ -143,14 +149,17 @@ const Contact = () => {
           </button>
         </form>
         {notification.visible && (
-          <div className={`notification ${notification.visible ? "show" : ""}`}>
+          <div
+            className={`notification ${notification.visible ? "show" : ""}`}
+            role="alert"
+          >
             <span className="notificationMessage">{notification.message}</span>
             <span className="checkmark">
               <RxCheck className="checkmarkIcon" />
             </span>
           </div>
         )}
-      </div>
+      </main>
     </section>
   );
 };

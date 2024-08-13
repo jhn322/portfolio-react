@@ -35,15 +35,15 @@ const Experience = () => {
   };
 
   return (
-    <div id="experience" className="experience">
-      <div className="me">
+    <section id="experience" className="experience">
+      <header className="me">
         <h2>Experience</h2>
         <p className="main">My work and education history</p>
-      </div>
+      </header>
       <div className="historyContainer">
         <section className="experienceSection">
           <h2 className="sectionTitle">
-            <FaBriefcase className="icon" /> Employment
+            <FaBriefcase className="employIcon" aria-hidden="true" /> Employment
           </h2>
           <div className="timeline">
             {[
@@ -68,17 +68,23 @@ const Experience = () => {
                 period: "2013",
               },
             ].map((job, index) => (
-              <div key={index} className="timelineItem" ref={addToRefs}>
+              <article
+                key={index}
+                className="timelineItem"
+                ref={addToRefs}
+                role="listitem"
+              >
                 <h3>{job.title}</h3>
                 <p className="company">{job.company}</p>
                 <p className="period">{job.period}</p>
-              </div>
+              </article>
             ))}
           </div>
         </section>
         <section className="experienceSection">
           <h2 className="sectionTitle">
-            <FaGraduationCap className="icon2" /> Education
+            <FaGraduationCap className="schoolIcon" aria-hidden="true" />{" "}
+            Education
           </h2>
           <div className="timeline">
             {[
@@ -98,16 +104,21 @@ const Experience = () => {
                 period: "2014 - 2015",
               },
             ].map((edu, index) => (
-              <div key={index} className="timelineItem" ref={addToRefs}>
+              <article
+                key={index}
+                className="timelineItem"
+                ref={addToRefs}
+                role="listitem"
+              >
                 <h3>{edu.title}</h3>
                 <p className="institution">{edu.institution}</p>
                 <p className="period">{edu.period}</p>
-              </div>
+              </article>
             ))}
           </div>
         </section>
       </div>
-    </div>
+    </section>
   );
 };
 

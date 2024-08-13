@@ -10,7 +10,7 @@ const skills = [
   { skill: "React", startYear: 2024, startMonth: 3 },
   { skill: "GIT", startYear: 2023, startMonth: 10 },
   { skill: "TypeScript", startYear: 2023, startMonth: 12 },
-  { skill: "Javascript", startYear: 2023, startMonth: 9 },
+  { skill: "JavaScript", startYear: 2023, startMonth: 9 },
   { skill: "HTML & CSS", startYear: 2023, startMonth: 9 },
   { skill: "Node.JS", startYear: 2024, startMonth: 5 },
   { skill: "Docker", startYear: 2020, startMonth: 1 },
@@ -57,7 +57,7 @@ const Skills = () => {
   const skillPriority = {
     "HTML & CSS": 4,
     GIT: 3,
-    Javascript: 2,
+    JavaScript: 2,
     TypeScript: 1,
     React: 1,
     "Node.JS": 0,
@@ -112,14 +112,14 @@ const Skills = () => {
   return (
     <section id="skills" className="skillsContainer" ref={sectionRef}>
       <div className="meExperience">
-        <div className="me">
+        <header className="me">
           <h2>Skills</h2>
           <p className="main">My developer & software skills</p>
-        </div>
+        </header>
       </div>
       <div className="innerContainer">
         <article className="infoContainer">
-          <h3 className="infoHeadline">Some about my abilites</h3>
+          <h3 className="infoHeadline">About My Abilities</h3>
           <p className="info">
             With a new-found passion in both front-end and back-end development,
             I am looking to improve my skills across a diverse range of

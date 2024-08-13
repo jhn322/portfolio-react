@@ -8,7 +8,9 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsWideScreen(window.innerWidth >= 1024);
+      requestAnimationFrame(() => {
+        setIsWideScreen(window.innerWidth >= 1024);
+      });
     };
 
     window.addEventListener("resize", handleResize);
@@ -16,7 +18,7 @@ const Navbar = () => {
   }, []);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prev) => !prev);
   };
 
   const handleScroll = (event) => {
@@ -33,12 +35,24 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={isWideScreen ? "wideScreen" : ""}>
-      <div className="logoContainer" onClick={navigateHome}>
-        <img src={jsLogo} alt="Logo" className="navLogo" />
+    <nav className={`navbar ${isWideScreen ? "wideScreen" : ""}`}>
+      <div
+        className="logoContainer"
+        onClick={navigateHome}
+        role="button"
+        tabIndex={0}
+        aria-label="Go to home"
+      >
+        <img src={jsLogo} alt="Brand Logo" className="navLogo" />
       </div>
       {!isWideScreen && (
-        <div className="menuIcon" onClick={toggleMenu}>
+        <div
+          className="menuIcon"
+          onClick={toggleMenu}
+          role="button"
+          tabIndex={0}
+          aria-label="Toggle menu"
+        >
           <svg
             className={`ham hamRotate ham1 ${isOpen ? "active" : ""}`}
             viewBox="0 0 100 100"
@@ -62,36 +76,20 @@ const Navbar = () => {
           isWideScreen ? "wideScreenMenu" : ""
         }`}
       >
-        <li className="navList">
-          <a href="#home" className="navItem" onClick={handleScroll}>
-            Home
-          </a>
-        </li>
-        <li className="navList">
-          <a href="#about" className="navItem" onClick={handleScroll}>
-            About
-          </a>
-        </li>
-        <li className="navList">
-          <a href="#skills" className="navItem" onClick={handleScroll}>
-            Skills
-          </a>
-        </li>
-        <li className="navList">
-          <a href="#experience" className="navItem" onClick={handleScroll}>
-            Experience
-          </a>
-        </li>
-        <li className="navList">
-          <a href="#projects" className="navItem" onClick={handleScroll}>
-            Projects
-          </a>
-        </li>
-        <li className="navList">
-          <a href="#contact" className="navItem" onClick={handleScroll}>
-            Contact
-          </a>
-        </li>
+        {["Home", "About", "Skills", "Experience", "Projects", "Contact"].map(
+          (item) => (
+            <li key={item} className="navList">
+              <a
+                href={`#${item.toLowerCase()}`}
+                className="navItem"
+                onClick={handleScroll}
+                aria-label={`Navigate to ${item}`}
+              >
+                {item}
+              </a>
+            </li>
+          )
+        )}
       </ul>
     </nav>
   );

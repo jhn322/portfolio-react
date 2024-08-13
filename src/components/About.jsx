@@ -52,10 +52,10 @@ const About = () => {
 
   return (
     <section className="aboutContainer" id="about">
-      <div className="me">
+      <header className="me">
         <h2>About Me</h2>
         <p className="main">Main information about me</p>
-      </div>
+      </header>
       <article className="information">
         <div
           className="profileContainer"
@@ -64,7 +64,7 @@ const About = () => {
         >
           <img
             src={profilePic}
-            alt="Profile Picture"
+            alt="A profile Picture"
             className="profilePic"
             style={{ transform }}
           />
@@ -97,7 +97,11 @@ const About = () => {
               </li>
               <li className="infoItem">
                 <span className="label">Email:</span>
-                <span className="value email" onClick={handleEmailClick}>
+                <span
+                  className="value email"
+                  onClick={handleEmailClick}
+                  aria-label="Send email to Johan Söderlund"
+                >
                   johan.soderlund96@gmail.com
                   <RxExternalLink
                     style={{ marginLeft: "0.5rem", verticalAlign: "middle" }}
