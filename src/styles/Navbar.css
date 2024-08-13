@@ -18,7 +18,7 @@ nav {
   z-index: 1000;
   height: 5rem;
   background-color: var(--nav-color);
-  border-bottom: 0.1px solid #4f0707;
+  border-bottom: 1px solid #4f0707;
   padding: 0.3rem 0 0 0.7rem;
 }
 

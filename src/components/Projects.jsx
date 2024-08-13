@@ -14,39 +14,50 @@ const ProjectCard = ({
   viewProject,
   codeLink,
   cardRef,
-}) => (
-  <a
-    href={viewProject}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="projectCard"
-    ref={cardRef}
-  >
-    <img src={imageUrl} alt={title} className="projectImage" />
-    <div className="projectContent">
-      <h3 className="projectTitle">{title}</h3>
-      <p className="projectDescription">{description}</p>
-      <div className="projectTags">
-        {tags.map((tag, index) => (
-          <span key={index} className="projectTag">
-            {tag}
-          </span>
-        ))}
+}) => {
+  const handleClick = () => {
+    window.open(viewProject, "_blank", "noopener,noreferrer");
+  };
+
+  const handleCodeClick = (e) => {
+    e.stopPropagation();
+  };
+
+  return (
+    <div
+      className="projectCard"
+      ref={cardRef}
+      onClick={handleClick}
+      role="button"
+      tabIndex={0}
+    >
+      <img src={imageUrl} alt={title} className="projectImage" />
+      <div className="projectContent">
+        <h3 className="projectTitle">{title}</h3>
+        <p className="projectDescription">{description}</p>
+        <div className="projectTags">
+          {tags.map((tag, index) => (
+            <span key={index} className="projectTag">
+              {tag}
+            </span>
+          ))}
+        </div>
+        {codeLink && (
+          <a
+            href={codeLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="projectCodeLink"
+            title="View Code"
+            onClick={handleCodeClick}
+          >
+            <FaCode />
+          </a>
+        )}
       </div>
-      {codeLink && (
-        <a
-          href={codeLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="projectCodeLink"
-          title="View Code"
-        >
-          <FaCode />
-        </a>
-      )}
     </div>
-  </a>
-);
+  );
+};
 
 const Projects = () => {
   const projectRefs = useRef([]);

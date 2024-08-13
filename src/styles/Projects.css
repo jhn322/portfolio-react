@@ -22,6 +22,7 @@
 .projectCard {
   position: relative;
   border-radius: 15px;
+  cursor: pointer;
   overflow: hidden;
   opacity: 0;
   transform: translateY(40px);
