@@ -112,14 +112,15 @@ li {
   margin: 0.4rem 0;
 }
 
-.nav-list {
+.navList {
   text-align: left;
   margin-left: 1rem;
 }
 
-.nav-item {
+.navItem {
   font-size: 1.6rem;
   display: inline-block;
   width: 100%;
   padding: 0 1rem;
+  transition: color 0.3s ease;
 }

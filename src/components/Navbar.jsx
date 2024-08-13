@@ -48,33 +48,33 @@ const Navbar = () => {
         </svg>
       </div>
       <ul className={`menu ${isOpen ? "open" : "closed"}`}>
-        <li className="nav-list">
-          <a href="#home" className="nav-item" onClick={handleScroll}>
+        <li className="navList">
+          <a href="#home" className="navItem" onClick={handleScroll}>
             Home
           </a>
         </li>
-        <li className="nav-list">
-          <a href="#about" className="nav-item" onClick={handleScroll}>
+        <li className="navList">
+          <a href="#about" className="navItem" onClick={handleScroll}>
             About
           </a>
         </li>
-        <li className="nav-list">
-          <a href="#experience" className="nav-item" onClick={handleScroll}>
+        <li className="navList">
+          <a href="#experience" className="navItem" onClick={handleScroll}>
             Experience
           </a>
         </li>
-        <li className="nav-list">
-          <a href="#workEducation" className="nav-item" onClick={handleScroll}>
+        <li className="navList">
+          <a href="#workEducation" className="navItem" onClick={handleScroll}>
             Work & Education
           </a>
         </li>
-        <li className="nav-list">
-          <a href="#projects" className="nav-item" onClick={handleScroll}>
+        <li className="navList">
+          <a href="#projects" className="navItem" onClick={handleScroll}>
             Projects
           </a>
         </li>
-        <li className="nav-list">
-          <a href="#contact" className="nav-item" onClick={handleScroll}>
+        <li className="navList">
+          <a href="#contact" className="navItem" onClick={handleScroll}>
             Contact
           </a>
         </li>
