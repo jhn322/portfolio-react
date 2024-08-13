@@ -98,18 +98,22 @@ const Projects = () => {
   ];
 
   return (
-    <div id="projects" className="projectsContainer">
-      <div className="me">
-        <h2>Projects</h2>
-        <p className="main">Take a look at my portfolio</p>
+    <div id="projects" className="projectsWrapper">
+      <div className="meExperience">
+        <div className="me">
+          <h2>Projects</h2>
+          <p className="main">Take a look at my portfolio</p>
+        </div>
       </div>
-      {projects.map((project, index) => (
-        <ProjectCard
-          key={index}
-          {...project}
-          cardRef={(el) => (projectRefs.current[index] = el)}
-        />
-      ))}
+      <div className="projectsContainer">
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={index}
+            {...project}
+            cardRef={(el) => (projectRefs.current[index] = el)}
+          />
+        ))}
+      </div>
     </div>
   );
 };

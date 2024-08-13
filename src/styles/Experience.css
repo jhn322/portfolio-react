@@ -8,7 +8,6 @@
 }
 
 .experienceContainer {
-  max-width: 40rem;
   margin: 0 auto;
   padding: 6rem 1rem;
   background-color: var(--bg-grey-color);
@@ -60,4 +59,35 @@
   font-size: 0.9em;
   font-weight: bold;
   color: var(--bg-color);
+}
+
+/* Bigger screens */
+@media (min-width: 1024px) {
+  .meExperience {
+    max-width: 69rem;
+    margin: 0 auto;
+  }
+
+  .experienceContainer {
+    padding: 6rem 3rem;
+  }
+
+  .innerContainer {
+    margin: 0 auto;
+    max-width: 69rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .infoContainer {
+    max-width: 25rem;
+    margin-right: 4rem;
+  }
+
+  .skillItemsWrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+  }
 }

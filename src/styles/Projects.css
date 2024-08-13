@@ -7,11 +7,15 @@
   font-family: "Assistant", sans-serif;
 }
 
+.projectsWrapper {
+  padding: 6rem 1rem;
+  background-color: var(--bg-grey-color);
+}
+
 .projectsContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 1rem;
-  padding: 6rem 1rem;
   background-color: var(--bg-grey-color);
 }
 
@@ -115,4 +119,17 @@
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 500;
+}
+
+/* Bigger screens */
+@media (min-width: 1024px) {
+  .projectsWrapper {
+    padding: 6rem 3rem;
+  }
+
+  .projectsContainer {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 69rem;
+    margin: 0 auto;
+  }
 }

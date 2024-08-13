@@ -105,3 +105,17 @@
     transform: translateY(0);
   }
 }
+
+/* Bigger screens */
+@media (min-width: 1024px) {
+  .workEducation {
+    padding: 6rem 3rem;
+  }
+
+  .historyContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}

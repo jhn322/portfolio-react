@@ -9,7 +9,6 @@
 
 section#contact {
   padding: 6rem 1rem;
-  max-width: 40rem;
   margin: 0 auto;
 }
 
@@ -118,5 +117,32 @@ textarea {
   }
   100% {
     opacity: 0;
+  }
+}
+
+/* Bigger screens */
+@media (min-width: 1024px) {
+  section#contact {
+    padding: 6rem 3rem;
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+
+  .innerInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+
+  .infoTitle,
+  .infoList {
+    margin-top: 0.8rem;
+  }
+
+  form {
+    flex: 1;
   }
 }

@@ -110,40 +110,65 @@ const Experience = () => {
   });
 
   return (
-    <div id="experience" className="experienceContainer" ref={sectionRef}>
-      <div className="me">
-        <h2>Experience</h2>
-        <p className="main">My developer & software skills</p>
-      </div>
-      <p className="info">
-        My skill set spans across various web front-end and back-end frameworks,
-        with a strong foundation in React, TypeScript, and JavaScript. From
-        versatile containerization with Docker to designing with Photoshop, I
-        bring a well-rounded approach to development and problem-solving.
-      </p>
-      {updatedExperiences.map((exp, index) => (
-        <div key={exp.skill} className="skillItem">
-          <div className="skillInfo">
-            <span className="skillName">{exp.skill}</span>
-            <span className="skillYears">
-              {exp.years}+ {exp.years === 1 ? "year" : "years"} of experience
-            </span>
-          </div>
-          <div className="skillBarContainer">
-            <div
-              className="skillBar"
-              style={{
-                width: animate ? `${exp.percentage}%` : "0%",
-                transitionDelay: `${index * 0.1}s`,
-              }}
-            ></div>
-            <span className="skillPercentage">
-              {animate ? exp.percentage : 0}%
-            </span>
-          </div>
+    <section id="experience" className="experienceContainer" ref={sectionRef}>
+      <div className="meExperience">
+        <div className="me">
+          <h2>Experience</h2>
+          <p className="main">My developer & software skills</p>
         </div>
-      ))}
-    </div>
+      </div>
+      <div className="innerContainer">
+        <article className="infoContainer">
+          <h3 className="infoHeadline">Some about my abilites</h3>
+          <p className="info">
+            With a new-found passion in both front-end and back-end development,
+            I am looking to improve my skills across a diverse range of
+            technologies and tools. My growing knowledge in{" "}
+            <strong>React</strong> allows me to build dynamic and responsive
+            user interfaces, while my proficiency in TypeScript and{" "}
+            <strong>JavaScript</strong> also benefits. My journey in software
+            development is complemented by a hobby interest with{" "}
+            <strong>Dockers</strong> seamless containerization and deployment. I
+            am adept at <strong>GIT</strong>, ensuring collaboration and code
+            management. My understanding of back-end enhances my ability to work
+            on server-side applications, providing a full-stack development
+            perspective. <br /> <br /> Beyond programming, I like to be creative
+            with tools like <strong>Photoshop</strong> for designing visuals or{" "}
+            <strong>Sony Vegas</strong> for video editing. My knowledge of{" "}
+            <strong>Linux</strong> systems speaks for my ability to navigate and
+            manage various operating systems effectively. Over the years, I am
+            continuously looking to improve my skills and embraced new
+            technologies, striving to deliver high-quality and innovative
+            solutions in every project I undertake.
+          </p>
+        </article>
+        <div className="skillItemsWrapper">
+          {updatedExperiences.map((exp, index) => (
+            <div key={exp.skill} className="skillItem">
+              <div className="skillInfo">
+                <span className="skillName">{exp.skill}</span>
+                <span className="skillYears">
+                  {exp.years}+ {exp.years === 1 ? "year" : "years"} of
+                  experience
+                </span>
+              </div>
+              <div className="skillBarContainer">
+                <div
+                  className="skillBar"
+                  style={{
+                    width: animate ? `${exp.percentage}%` : "0%",
+                    transitionDelay: `${index * 0.1}s`,
+                  }}
+                ></div>
+                <span className="skillPercentage">
+                  {animate ? exp.percentage : 0}%
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

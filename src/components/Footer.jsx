@@ -20,7 +20,7 @@ const Footer = () => {
           }
           onMouseOut={(e) => (e.currentTarget.style.color = "#f0f0f0")}
         >
-          <FaGithub size={24} />
+          <FaGithub size={28} />
         </a>
         <a
           href="https://www.linkedin.com/in/johan-s%C3%B6derlund-31b9862b7/"
@@ -32,7 +32,7 @@ const Footer = () => {
           }
           onMouseOut={(e) => (e.currentTarget.style.color = "#f0f0f0")}
         >
-          <FaLinkedin size={24} />
+          <FaLinkedin size={28} />
         </a>
       </div>
     </footer>

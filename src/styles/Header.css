@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+body {
+  width: 100%;
+}
+
 .parallax {
   height: 100vh;
   position: relative;
