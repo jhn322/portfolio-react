@@ -8,6 +8,17 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleScroll = (event) => {
+    event.preventDefault();
+
+    const targetId = event.target.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <nav>
       <div className="menu-icon" onClick={toggleMenu}>
@@ -30,32 +41,32 @@ const Navbar = () => {
       </div>
       <ul className={`menu ${isOpen ? "open" : "closed"}`}>
         <li className="nav-list">
-          <a href="#home" className="nav-item">
+          <a href="#home" className="nav-item" onClick={handleScroll}>
             Home
           </a>
         </li>
         <li className="nav-list">
-          <a href="#about" className="nav-item">
+          <a href="#about" className="nav-item" onClick={handleScroll}>
             About
           </a>
         </li>
         <li className="nav-list">
-          <a href="#experience" className="nav-item">
+          <a href="#experience" className="nav-item" onClick={handleScroll}>
             Experience
           </a>
         </li>
         <li className="nav-list">
-          <a href="#workEducation" className="nav-item">
+          <a href="#workEducation" className="nav-item" onClick={handleScroll}>
             Work & Education
           </a>
         </li>
         <li className="nav-list">
-          <a href="#portfolio" className="nav-item">
-            Portfolio
+          <a href="#projects" className="nav-item" onClick={handleScroll}>
+            Projects
           </a>
         </li>
         <li className="nav-list">
-          <a href="#contact" className="nav-item">
+          <a href="#contact" className="nav-item" onClick={handleScroll}>
             Contact
           </a>
         </li>

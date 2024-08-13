@@ -7,6 +7,12 @@
   font-family: "Assistant", sans-serif;
 }
 
+section#contact {
+  padding: 6rem 1rem;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
 .infoContainer {
   margin-bottom: 2rem;
 }
@@ -15,12 +21,6 @@
   font-size: 1.6rem;
   font-weight: 400;
   margin-bottom: 2rem;
-}
-
-section#contact {
-  padding: 6rem 1rem;
-  max-width: 40rem;
-  margin: 0 auto;
 }
 
 form {
@@ -65,4 +65,58 @@ textarea {
 
 .contactBtn {
   max-width: 8.9rem;
+}
+
+.notification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  z-index: 1005;
+  animation: fadeInOut 3s ease-in-out forwards;
+}
+
+.notification.show {
+  opacity: 1;
+}
+
+.checkmark {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.checkmarkIcon {
+  color: #12bd1d;
+}
+
+.notificationMessage {
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

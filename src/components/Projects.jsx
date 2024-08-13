@@ -64,7 +64,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="projectsContainer">
+    <div id="projects" className="projectsContainer">
       <div className="me">
         <h2>Projects</h2>
         <p className="main">Take a look at my portfolio</p>

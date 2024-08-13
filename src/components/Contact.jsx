@@ -1,15 +1,16 @@
-import { useState } from "react";
-import { RxExternalLink } from "react-icons/rx";
+import { useState, useEffect } from "react";
+import { RxExternalLink, RxCheck } from "react-icons/rx";
 import "../styles/Contact.css";
-
-const handleEmailClick = () => {
-  window.location.href = `mailto:johan.soderlund96@gmail.com`;
-};
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    message: "",
+  });
+
+  const [notification, setNotification] = useState({
+    visible: false,
     message: "",
   });
 
@@ -25,7 +26,7 @@ const Contact = () => {
     e.preventDefault();
 
     if (!formData.name || !formData.email || !formData.message) {
-      alert("Please fill in all fields.");
+      setNotification({ visible: true, message: "Please fill in all fields." });
       return;
     }
 
@@ -44,9 +45,12 @@ const Contact = () => {
       };
 
       await emailjs.send(serviceId, templateId, emailParams, publicKey);
-      alert("Message sent successfully!");
+      setNotification({ visible: true, message: "Message sent successfully!" });
     } catch (error) {
-      alert("Failed to send message, please try again.");
+      setNotification({
+        visible: true,
+        message: "Failed to send message, please try again.",
+      });
       console.error("EmailJS error:", error);
     }
 
@@ -56,6 +60,16 @@ const Contact = () => {
       message: "",
     });
   };
+
+  useEffect(() => {
+    if (notification.visible) {
+      const timer = setTimeout(() => {
+        setNotification((prev) => ({ ...prev, visible: false }));
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [notification.visible]);
 
   return (
     <section id="contact">
@@ -72,7 +86,12 @@ const Contact = () => {
           </li>
           <li className="infoItem">
             <span className="label">Email:</span>
-            <span className="value email" onClick={handleEmailClick}>
+            <span
+              className="value email"
+              onClick={() =>
+                (window.location.href = "mailto:johan.soderlund96@gmail.com")
+              }
+            >
               johan.soderlund96@gmail.com
               <RxExternalLink
                 style={{ marginLeft: "0.5rem", verticalAlign: "middle" }}
@@ -122,6 +141,14 @@ const Contact = () => {
           Send Message
         </button>
       </form>
+      {notification.visible && (
+        <div className={`notification ${notification.visible ? "show" : ""}`}>
+          <span className="notificationMessage">{notification.message}</span>
+          <span className="checkmark">
+            <RxCheck className="checkmarkIcon" />
+          </span>
+        </div>
+      )}
     </section>
   );
 };
