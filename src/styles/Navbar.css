@@ -124,3 +124,66 @@ li {
   padding: 0 1rem;
   transition: color 0.3s ease;
 }
+
+@media (min-width: 1024px) {
+  nav.wideScreen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    height: 5rem;
+  }
+
+  .menuIcon {
+    display: none;
+  }
+
+  ul.menu.wideScreenMenu {
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: none;
+    background-color: transparent;
+    overflow: visible;
+    flex-grow: 1;
+  }
+
+  ul.menu.wideScreenMenu li {
+    width: auto;
+    margin: 0 1.5rem;
+  }
+
+  .navList {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .navItem {
+    font-size: 1.3rem;
+    padding: 0;
+    white-space: nowrap;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  .navItem::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+
+  .navItem:hover::after {
+    width: 100%;
+    left: 0;
+  }
+
+  .logoContainer {
+    flex-shrink: 0;
+  }
+}

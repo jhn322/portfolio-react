@@ -1,174 +1,113 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import "../styles/Experience.css";
-
-const getCurrentDate = () => {
-  const now = new Date();
-  return { year: now.getFullYear(), month: now.getMonth() + 1 };
-};
-
-const experiences = [
-  { skill: "React", startYear: 2024, startMonth: 3 },
-  { skill: "GIT", startYear: 2023, startMonth: 10 },
-  { skill: "TypeScript", startYear: 2023, startMonth: 12 },
-  { skill: "Javascript", startYear: 2023, startMonth: 9 },
-  { skill: "HTML & CSS", startYear: 2023, startMonth: 9 },
-  { skill: "Node.JS", startYear: 2024, startMonth: 5 },
-  { skill: "Docker", startYear: 2020, startMonth: 1 },
-  { skill: "Photoshop", startYear: 2011, startMonth: 3 },
-  { skill: "Linux", startYear: 2018, startMonth: 3 },
-  { skill: "Kometa", startYear: 2021, startMonth: 1 },
-  { skill: "Sony Vegas", startYear: 2011, startMonth: 3 },
-];
+import { FaBriefcase, FaGraduationCap } from "react-icons/fa";
 
 const Experience = () => {
-  const [animate, setAnimate] = useState(false);
-  const sectionRef = useRef(null);
-  const [currentDate, setCurrentDate] = useState(getCurrentDate());
+  const timelineRefs = useRef([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setAnimate(true);
-          observer.unobserve(entry.target);
-        }
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+          }
+        });
       },
-      {
-        threshold: 0.1,
-      }
+      { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    const dateInterval = setInterval(() => {
-      setCurrentDate(getCurrentDate());
-    }, 60000);
+    timelineRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-      clearInterval(dateInterval);
+      timelineRefs.current.forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
     };
   }, []);
 
-  const skillPriority = {
-    "HTML & CSS": 4,
-    GIT: 3,
-    Javascript: 2,
-    TypeScript: 1,
-    React: 1,
-    "Node.JS": 0,
-  };
-
-  const calculateYearsOfExperience = (startYear, startMonth) => {
-    const { year: currentYear, month: currentMonth } = currentDate;
-    let years = currentYear - startYear;
-    let months = currentMonth - startMonth;
-
-    if (months < 0) {
-      years -= 1;
-      months += 12;
+  const addToRefs = (el) => {
+    if (el && !timelineRefs.current.includes(el)) {
+      timelineRefs.current.push(el);
     }
-
-    return { years, months };
   };
-
-  const calculatePercentage = (yearsOfExperience, skill) => {
-    const maxExperience = 13;
-    const minExperience = 0;
-
-    const baseExperienceFactor = skill in skillPriority ? 75 : 80;
-
-    let percentage = Math.round(
-      baseExperienceFactor +
-        ((yearsOfExperience - minExperience) /
-          (maxExperience - minExperience)) *
-          19
-    );
-
-    if (skill in skillPriority) {
-      percentage += skillPriority[skill];
-    }
-
-    if (skill === "Node.JS") {
-      percentage -= 1;
-    }
-
-    return Math.min(percentage, 99);
-  };
-
-  const updatedExperiences = experiences.map((exp) => {
-    const { years } = calculateYearsOfExperience(exp.startYear, exp.startMonth);
-    return {
-      ...exp,
-      years,
-      percentage: calculatePercentage(years, exp.skill),
-    };
-  });
 
   return (
-    <section id="experience" className="experienceContainer" ref={sectionRef}>
-      <div className="meExperience">
-        <div className="me">
-          <h2>Experience</h2>
-          <p className="main">My developer & software skills</p>
-        </div>
+    <div id="experience" className="experience">
+      <div className="me">
+        <h2>History</h2>
+        <p className="main">My work and education history</p>
       </div>
-      <div className="innerContainer">
-        <article className="infoContainer">
-          <h3 className="infoHeadline">Some about my abilites</h3>
-          <p className="info">
-            With a new-found passion in both front-end and back-end development,
-            I am looking to improve my skills across a diverse range of
-            technologies and tools. My growing knowledge in{" "}
-            <strong>React</strong> allows me to build dynamic and responsive
-            user interfaces, while my proficiency in TypeScript and{" "}
-            <strong>JavaScript</strong> also benefits. My journey in software
-            development is complemented by a hobby interest with{" "}
-            <strong>Dockers</strong> seamless containerization and deployment. I
-            am adept at <strong>GIT</strong>, ensuring collaboration and code
-            management. My understanding of back-end enhances my ability to work
-            on server-side applications, providing a full-stack development
-            perspective. <br /> <br /> Beyond programming, I like to be creative
-            with tools like <strong>Photoshop</strong> for designing visuals or{" "}
-            <strong>Sony Vegas</strong> for video editing. My knowledge of{" "}
-            <strong>Linux</strong> systems speaks for my ability to navigate and
-            manage various operating systems effectively. Over the years, I am
-            continuously looking to improve my skills and embraced new
-            technologies, striving to deliver high-quality and innovative
-            solutions in every project I undertake.
-          </p>
-        </article>
-        <div className="skillItemsWrapper">
-          {updatedExperiences.map((exp, index) => (
-            <div key={exp.skill} className="skillItem">
-              <div className="skillInfo">
-                <span className="skillName">{exp.skill}</span>
-                <span className="skillYears">
-                  {exp.years}+ {exp.years === 1 ? "year" : "years"} of
-                  experience
-                </span>
+      <div className="historyContainer">
+        <section className="experienceSection">
+          <h2 className="sectionTitle">
+            <FaBriefcase className="icon" /> Employment
+          </h2>
+          <div className="timeline">
+            {[
+              {
+                title: "Lokalvårdare Vikarie",
+                company: "Umeå Städservice",
+                period: "2015 - Present",
+              },
+              {
+                title: "Medarbetare Mjölkbehandlingsavdelning",
+                company: "Norrmejerier",
+                period: "2023",
+              },
+              {
+                title: "Vaktmästare",
+                company: "Sandviks Idrottsplan",
+                period: "2014",
+              },
+              {
+                title: "Butiksmedarbetare",
+                company: "Coop Konsum Holmsund",
+                period: "2013",
+              },
+            ].map((job, index) => (
+              <div key={index} className="timelineItem" ref={addToRefs}>
+                <h3>{job.title}</h3>
+                <p className="company">{job.company}</p>
+                <p className="period">{job.period}</p>
               </div>
-              <div className="skillBarContainer">
-                <div
-                  className="skillBar"
-                  style={{
-                    width: animate ? `${exp.percentage}%` : "0%",
-                    transitionDelay: `${index * 0.1}s`,
-                  }}
-                ></div>
-                <span className="skillPercentage">
-                  {animate ? exp.percentage : 0}%
-                </span>
+            ))}
+          </div>
+        </section>
+        <section className="experienceSection">
+          <h2 className="sectionTitle">
+            <FaGraduationCap className="icon2" /> Education
+          </h2>
+          <div className="timeline">
+            {[
+              {
+                title: "Fullstack JavaScript Extended",
+                institution: "Chas Academy",
+                period: "2023 - 2025",
+              },
+              {
+                title: "Dator- och Kommunikationsteknik",
+                institution: "Viva Vägledning Vuxenutbildning",
+                period: "2016 - 2018",
+              },
+              {
+                title: "El- och Energiprogrammet",
+                institution: "Dragonskolan",
+                period: "2014 - 2015",
+              },
+            ].map((edu, index) => (
+              <div key={index} className="timelineItem" ref={addToRefs}>
+                <h3>{edu.title}</h3>
+                <p className="institution">{edu.institution}</p>
+                <p className="period">{edu.period}</p>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </section>
       </div>
-    </section>
+    </div>
   );
 };
 

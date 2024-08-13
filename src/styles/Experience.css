@@ -4,90 +4,118 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Assistant", sans-serif;
 }
 
-.experienceContainer {
-  margin: 0 auto;
+.experience {
   padding: 6rem 1rem;
-  background-color: var(--bg-grey-color);
+  max-width: 75rem;
+  margin: 0 auto;
 }
 
-.skillItem {
-  margin-bottom: 1rem;
+.historyContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
 }
 
-.skillInfo {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.4rem;
+.experienceSection {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.info {
+.experienceSection:hover {
+  transform: translateY(-10px);
+}
+
+.sectionTitle {
+  font-size: 2rem;
   margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.skillName {
-  font-weight: bold;
+.icon {
+  font-size: 1.6rem;
 }
 
-.skillYears {
-  font-size: 0.9em;
-  color: var(--text-grey-color);
+.icon2 {
+  font-size: 2rem;
 }
 
-.skillBarContainer {
-  background-color: var(--text-color);
-  height: 1.2rem;
-  border-radius: 6px;
-  overflow: hidden;
+.timeline {
   position: relative;
 }
 
-.skillBar {
-  background-color: var(--accent-color);
-  height: 100%;
-  width: 0;
-  transition: width 1s ease-out;
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--text-color);
 }
 
-.skillPercentage {
+.timelineItem {
+  padding-left: 2rem;
+  position: relative;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.timelineItem.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timelineItem::before {
+  content: "";
   position: absolute;
-  right: 5px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 0.9em;
+  left: -5px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--text-color);
+}
+
+.timelineItem h3 {
+  margin-bottom: 0.5rem;
+}
+
+.timelineItem .company,
+.timelineItem .institution {
   font-weight: bold;
-  color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.timelineItem .period {
+  color: var(--text-grey-color);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Bigger screens */
 @media (min-width: 1024px) {
-  .meExperience {
-    max-width: 69rem;
-    margin: 0 auto;
-  }
-
-  .experienceContainer {
+  .experience {
     padding: 6rem 3rem;
   }
 
-  .innerContainer {
-    margin: 0 auto;
-    max-width: 69rem;
+  .historyContainer {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-  }
-
-  .infoContainer {
-    max-width: 25rem;
-    margin-right: 4rem;
-  }
-
-  .skillItemsWrapper {
-    display: flex;
-    flex-direction: column;
-    flex: 2;
+    align-items: center;
+    justify-content: center;
   }
 }
