@@ -1,48 +1,112 @@
-import React from "react";
+import { useEffect, useRef } from "react";
 import "../styles/WorkEducation.css";
+import { FaBriefcase, FaGraduationCap } from "react-icons/fa";
 
 const WorkEducation = () => {
+  const timelineRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    timelineRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => {
+      timelineRefs.current.forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, []);
+
+  const addToRefs = (el) => {
+    if (el && !timelineRefs.current.includes(el)) {
+      timelineRefs.current.push(el);
+    }
+  };
+
   return (
     <div className="workEducation">
       <div className="me">
         <h2>History</h2>
         <p className="main">My work and education history</p>
       </div>
-      <section id="workEducation" className="workEducationSection">
-        <h2 className="workTitle">Job</h2>
-        <div className="job">
-          <h3>Lokalvårdare Vikarie</h3>
-          <p>Umeå Städservice | 2015 - Present</p>
-        </div>
-        <div className="job">
-          <h3>Medarbetare Mjölkbehandlingsavdelning</h3>
-          <p>Norrmejerier | 2023</p>
-        </div>
-        <div className="job">
-          <h3>Vaktmästare</h3>
-          <p>Sandviks Idrottsplan | 2014</p>
-        </div>
-        <div className="job last">
-          <h3>Butiksmedarbetare</h3>
-          <p>Coop Konsum Holmsund | 2013</p>
-        </div>
-      </section>
-
-      <section className="workEducationSection">
-        <h2 className="educationTitle">Education</h2>
-        <div className="education">
-          <h3>Fullstack JavaScript Extended </h3>
-          <p>Chas Academy | 2023 - 2025</p>
-        </div>
-        <div className="education">
-          <h3>Dator- och Kommunikationsteknik</h3>
-          <p>Viva Vägledning Vuxenutbildning | 2016 - 2018</p>
-        </div>
-        <div className="education">
-          <h3>El- och Energiprogrammet </h3>
-          <p>Dragonskolan | 2014 - 2015</p>
-        </div>
-      </section>
+      <div className="historyContainer">
+        <section id="workEducation" className="workEducationSection">
+          <h2 className="sectionTitle">
+            <FaBriefcase className="icon" /> Employment
+          </h2>
+          <div className="timeline">
+            {[
+              {
+                title: "Lokalvårdare Vikarie",
+                company: "Umeå Städservice",
+                period: "2015 - Present",
+              },
+              {
+                title: "Medarbetare Mjölkbehandlingsavdelning",
+                company: "Norrmejerier",
+                period: "2023",
+              },
+              {
+                title: "Vaktmästare",
+                company: "Sandviks Idrottsplan",
+                period: "2014",
+              },
+              {
+                title: "Butiksmedarbetare",
+                company: "Coop Konsum Holmsund",
+                period: "2013",
+              },
+            ].map((job, index) => (
+              <div key={index} className="timelineItem" ref={addToRefs}>
+                <h3>{job.title}</h3>
+                <p className="company">{job.company}</p>
+                <p className="period">{job.period}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+        <section className="workEducationSection">
+          <h2 className="sectionTitle">
+            <FaGraduationCap className="icon2" /> Education
+          </h2>
+          <div className="timeline">
+            {[
+              {
+                title: "Fullstack JavaScript Extended",
+                institution: "Chas Academy",
+                period: "2023 - 2025",
+              },
+              {
+                title: "Dator- och Kommunikationsteknik",
+                institution: "Viva Vägledning Vuxenutbildning",
+                period: "2016 - 2018",
+              },
+              {
+                title: "El- och Energiprogrammet",
+                institution: "Dragonskolan",
+                period: "2014 - 2015",
+              },
+            ].map((edu, index) => (
+              <div key={index} className="timelineItem" ref={addToRefs}>
+                <h3>{edu.title}</h3>
+                <p className="institution">{edu.institution}</p>
+                <p className="period">{edu.period}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
     </div>
   );
 };

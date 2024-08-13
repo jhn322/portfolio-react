@@ -8,18 +8,17 @@
 
 .workEducation {
   padding: 6rem 1rem;
+  max-width: 75rem;
+  margin: 0 auto;
 }
 
-.workEducation p {
-  color: var(--text-grey-color);
+.historyContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
 }
 
 .workEducationSection {
-  border: 1px solid var(--text-color);
-  border-radius: 15px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  background-color: var(--bg-grey-color);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -27,17 +26,82 @@
   transform: translateY(-10px);
 }
 
-.workTitle,
-.educationTitle {
+.sectionTitle {
   font-size: 2rem;
   margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.job,
-.education {
-  margin-bottom: 1.5rem;
+.icon {
+  font-size: 1.6rem;
 }
 
-.last {
-  margin-bottom: 3rem;
+.icon2 {
+  font-size: 2rem;
+}
+
+.timeline {
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--text-color);
+}
+
+.timelineItem {
+  padding-left: 2rem;
+  position: relative;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.timelineItem.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timelineItem::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--text-color);
+}
+
+.timelineItem h3 {
+  margin-bottom: 0.5rem;
+}
+
+.timelineItem .company,
+.timelineItem .institution {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.timelineItem .period {
+  color: var(--text-grey-color);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
