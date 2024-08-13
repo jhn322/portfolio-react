@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { FaCode } from "react-icons/fa";
 import "../styles/Projects.css";
 import project1 from "../assets/project1.jpg";
 import project2 from "../assets/project2.jpg";
@@ -10,11 +11,12 @@ const ProjectCard = ({
   description,
   imageUrl,
   tags,
-  githubLink,
+  viewProject,
+  codeLink,
   cardRef,
 }) => (
   <a
-    href={githubLink}
+    href={viewProject}
     target="_blank"
     rel="noopener noreferrer"
     className="projectCard"
@@ -31,6 +33,17 @@ const ProjectCard = ({
           </span>
         ))}
       </div>
+      {codeLink && (
+        <a
+          href={codeLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="projectCodeLink"
+          title="View Code"
+        >
+          <FaCode />
+        </a>
+      )}
     </div>
   </a>
 );
@@ -68,16 +81,18 @@ const Projects = () => {
       description:
         "An informational site with complex navigation & search to read about and view photos of Holmsund.",
       imageUrl: project1,
-      tags: ["React", "Router", "Weather API", "Dark Mode"],
-      githubLink: "https://github.com/jhn322/holmsund-information",
+      tags: ["React Router", "Fuzzy Search", "API"],
+      viewProject: "https://jhn-holmsund-information.netlify.app/",
+      codeLink: "https://github.com/jhn322/holmsund-information",
     },
     {
       title: "Kanban Group Project",
       description:
-        "A collaborative project using React with Redux to create a useful kanban board.",
+        "A collaborative group project utilizing GIT while coding in React with Redux to create a useful kanban board.",
       imageUrl: project2,
       tags: ["React", "Redux", "Google Analytics"],
-      githubLink: "https://github.com/jhn322/kanban-group-react",
+      viewProject: "https://kanban-kollab.netlify.app/",
+      codeLink: "https://github.com/jhn322/kanban-group-react",
     },
     {
       title: "The Dashboard",
@@ -85,7 +100,8 @@ const Projects = () => {
         "A dashboard for bookmarking links, looking up the weather and writing down notes quickly.",
       imageUrl: project3,
       tags: ["Javascript", "CSS", "API"],
-      githubLink: "https://github.com/jhn322/dashboard-frontend",
+      viewProject: "https://jhn-dashboard.netlify.app/",
+      codeLink: "https://github.com/jhn322/dashboard-frontend",
     },
     {
       title: "Kometa Config",
@@ -93,7 +109,8 @@ const Projects = () => {
         "My config to a powerful python tool designed to give you complete control over your media libraries.",
       imageUrl: project4,
       tags: ["Python", "Docker", "YAML"],
-      githubLink: "https://github.com/jhn322/kometa-config",
+      viewProject: "https://kometa.wiki/en/latest/",
+      codeLink: "https://github.com/jhn322/kometa-config",
     },
   ];
 
