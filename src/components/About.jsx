@@ -37,10 +37,12 @@ const About = () => {
           I'm Johan, <span>Web Developer</span>
         </h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
-          consequuntur atque aliquam, id ea quod facilis maxime harum dolorum
-          totam magnam praesentium dolores dolore illum deleniti quia.
-          Praesentium, distinctio non.
+          Hello! I'm Johan Söderlund, a passionate new-found Web Developer. I am
+          dedicated to my work and am committed to delivering high-quality,
+          smart solutions. I see each project is an opportunity to improve and
+          learn something new, ensuring that the final product not only meets
+          but surpasses expectations. I look forward to growing professionally
+          by focusing on efficiency, functionality, and aesthetics.
         </p>
         <div className="list">
           <ul className="infoList">

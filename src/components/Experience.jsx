@@ -115,6 +115,12 @@ const Experience = () => {
         <h2>Experience</h2>
         <p className="main">My developer & software skills</p>
       </div>
+      <p className="info">
+        My skill set spans across various web front-end and back-end frameworks,
+        with a strong foundation in React, TypeScript, and JavaScript. From
+        versatile containerization with Docker to designing with Photoshop, I
+        bring a well-rounded approach to development and problem-solving.
+      </p>
       {updatedExperiences.map((exp, index) => (
         <div key={exp.skill} className="skillItem">
           <div className="skillInfo">
