@@ -139,10 +139,10 @@ li {
   }
 
   ul.menu.wideScreenMenu {
-    position: static;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: static;
     max-height: none;
     background-color: transparent;
     overflow: visible;
@@ -160,18 +160,19 @@ li {
   }
 
   .navItem {
+    position: relative;
+    text-transform: uppercase;
     font-size: 1.3rem;
     padding: 0;
     white-space: nowrap;
-    position: relative;
     transition: color 0.3s ease;
   }
 
   .navItem::after {
-    content: "";
     position: absolute;
     bottom: -5px;
     left: 50%;
+    content: "";
     width: 0;
     height: 2px;
     background-color: var(--accent-color);

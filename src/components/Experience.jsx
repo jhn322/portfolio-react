@@ -37,7 +37,7 @@ const Experience = () => {
   return (
     <div id="experience" className="experience">
       <div className="me">
-        <h2>History</h2>
+        <h2>Experience</h2>
         <p className="main">My work and education history</p>
       </div>
       <div className="historyContainer">
