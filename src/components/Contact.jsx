@@ -59,7 +59,7 @@ const Contact = () => {
 
   return (
     <section id="contact">
-      <div className="aboutMe">
+      <div className="me">
         <h2>Contact Me</h2>
         <p className="main">Get in touch with me</p>
       </div>
@@ -118,11 +118,9 @@ const Contact = () => {
             required
           ></textarea>
         </div>
-        <div className="btnContainer">
-          <button type="submit" className="contactBtn">
-            Send Message
-          </button>
-        </div>
+        <button type="submit" className="contactBtn">
+          Send Message
+        </button>
       </form>
     </section>
   );

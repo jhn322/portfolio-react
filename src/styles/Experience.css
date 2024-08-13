@@ -10,7 +10,6 @@
 .experienceContainer {
   max-width: 40rem;
   margin: 0 auto;
-  margin-bottom: 4rem;
   padding: 6rem 1rem;
   background-color: var(--bg-grey-color);
 }
@@ -31,7 +30,7 @@
 
 .skillYears {
   font-size: 0.9em;
-  color: var(--text-color);
+  color: var(--text-grey-color);
 }
 
 .skillBarContainer {

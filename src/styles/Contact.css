@@ -18,7 +18,7 @@
 }
 
 section#contact {
-  padding: 1rem;
+  padding: 6rem 1rem;
   max-width: 40rem;
   margin: 0 auto;
 }
@@ -61,10 +61,6 @@ textarea:focus {
 
 textarea {
   min-height: 6rem;
-}
-
-.btnContainer {
-  padding: 0.5rem 0 6rem 0;
 }
 
 .contactBtn {

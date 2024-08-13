@@ -111,7 +111,7 @@ const Experience = () => {
 
   return (
     <div id="experience" className="experienceContainer" ref={sectionRef}>
-      <div className="aboutMe">
+      <div className="me">
         <h2>Experience</h2>
         <p className="main">My developer & software skills</p>
       </div>

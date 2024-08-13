@@ -7,14 +7,37 @@
 }
 
 .workEducation {
-  padding: 2rem 1rem;
+  padding: 6rem 1rem;
+}
+
+.workEducation p {
+  color: var(--text-grey-color);
+}
+
+.workEducationSection {
+  border: 1px solid var(--text-color);
+  border-radius: 15px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--bg-grey-color);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.workEducationSection:hover {
+  transform: translateY(-10px);
 }
 
 .workTitle,
 .educationTitle {
   font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.job,
+.education {
+  margin-bottom: 1.5rem;
 }
 
 .last {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }

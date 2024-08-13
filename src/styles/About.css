@@ -8,14 +8,14 @@
 }
 
 .container {
-  padding: 0 1rem;
+  padding: 6rem 1rem;
 }
 
-.aboutMe {
-  padding: 4rem 0;
+.me {
+  padding-bottom: 5rem;
 }
 
-.aboutMe h2 {
+.me h2 {
   text-transform: uppercase;
   margin-bottom: -0.4rem;
 }
@@ -56,6 +56,7 @@
 
 .value {
   text-align: left;
+  color: var(--text-grey-color);
 }
 
 .email {
@@ -72,5 +73,4 @@
   flex-direction: column;
   align-items: flex-start;
   margin-top: 1rem;
-  margin-bottom: 6rem;
 }

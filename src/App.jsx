@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import About from "./components/About";
 import Experience from "./components/Experience";
 import WorkEducation from "./components/WorkEducation";
-import Portfolio from "./components/Portfolio";
+import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollUp from "./components/ScrollUp";
@@ -18,7 +18,7 @@ function App() {
         <About />
         <Experience />
         <WorkEducation />
-        <Portfolio />
+        <Projects />
         <Contact />
         <Footer />
         <ScrollUp />

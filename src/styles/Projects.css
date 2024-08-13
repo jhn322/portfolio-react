@@ -1,0 +1,69 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Assistant", sans-serif;
+}
+
+.projectsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1rem;
+  padding: 6rem 1rem;
+  background-color: var(--bg-grey-color);
+}
+
+.projectCard {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 1px solid var(--text-color);
+  background-color: var(--bg-color);
+}
+
+.projectCard:hover {
+  transform: translateY(-10px);
+}
+
+.projectImage {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.projectContent {
+  padding: 1rem;
+}
+
+.projectTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.projectDescription {
+  font-size: 0.9rem;
+  color: var(--text-grey-color);
+  margin-bottom: 1rem;
+}
+
+.projectTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.projectTag {
+  color: var(--text-grey-color);
+  background-color: var(--bg-grey-color);
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--text-color);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}

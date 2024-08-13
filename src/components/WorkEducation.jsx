@@ -4,8 +4,12 @@ import "../styles/WorkEducation.css";
 const WorkEducation = () => {
   return (
     <div className="workEducation">
-      <section id="workEducation">
-        <h2 className="workTitle">Work Experience</h2>
+      <div className="me">
+        <h2>History</h2>
+        <p className="main">My work and education history</p>
+      </div>
+      <section id="workEducation" className="workEducationSection">
+        <h2 className="workTitle">Job</h2>
         <div className="job">
           <h3>Lokalvårdare Vikarie</h3>
           <p>Umeå Städservice | 2015 - Present</p>
@@ -24,7 +28,7 @@ const WorkEducation = () => {
         </div>
       </section>
 
-      <section id="workEducation">
+      <section className="workEducationSection">
         <h2 className="educationTitle">Education</h2>
         <div className="education">
           <h3>Fullstack JavaScript Extended </h3>
