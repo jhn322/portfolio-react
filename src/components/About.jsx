@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { RxExternalLink } from "react-icons/rx";
 import "../styles/About.css";
 import profilePic from "../assets/pfp.jpg";
@@ -25,6 +25,29 @@ const handleEmailClick = () => {
 };
 
 const About = () => {
+  const [transform, setTransform] = useState("translate(0, 0)");
+
+  const handleMouseMove = (e) => {
+    const { clientX: mouseX, clientY: mouseY } = e;
+    const { left, top, width, height } =
+      e.currentTarget.getBoundingClientRect();
+
+    const centerX = left + width / 2;
+    const centerY = top + height / 2;
+
+    const deltaX = mouseX - centerX;
+    const deltaY = mouseY - centerY;
+
+    const moveX = (-deltaX / width) * 20;
+    const moveY = (-deltaY / height) * 20;
+
+    setTransform(`translate(${moveX}px, ${moveY}px)`);
+  };
+
+  const handleMouseLeave = () => {
+    setTransform("translate(0, 0)");
+  };
+
   const age = calculateAge("1996-05-02");
 
   return (
@@ -34,8 +57,17 @@ const About = () => {
         <p className="main">Main information about me</p>
       </div>
       <article className="information">
-        <div className="profileContainer">
-          <img src={profilePic} alt="Profile Picture" className="profilePic" />
+        <div
+          className="profileContainer"
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+        >
+          <img
+            src={profilePic}
+            alt="Profile Picture"
+            className="profilePic"
+            style={{ transform }}
+          />
         </div>
         <div className="contentContainer">
           <h3 className="infoHeadline">
