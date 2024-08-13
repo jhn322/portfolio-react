@@ -18,9 +18,27 @@
 .projectCard {
   border-radius: 15px;
   overflow: hidden;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-out;
   border: 1px solid var(--text-color);
   background-color: var(--bg-color);
+}
+
+.projectCard.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .projectCard:hover {

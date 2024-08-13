@@ -13,15 +13,27 @@ nav {
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   z-index: 1000;
   height: 5rem;
   background-color: var(--nav-color);
   border-bottom: 0.1px solid #4f0707;
+  padding: 0.3rem 0 0 0.7rem;
 }
 
-.menu-icon {
+.logoContainer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navLogo {
+  height: 3.5rem;
+  width: auto;
+}
+
+.menuIcon {
   display: flex;
   align-items: center;
   justify-content: center;

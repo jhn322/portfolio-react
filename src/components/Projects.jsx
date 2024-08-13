@@ -1,16 +1,24 @@
-import React from "react";
+import { useEffect, useRef } from "react";
 import "../styles/Projects.css";
 import project1 from "../assets/project1.jpg";
 import project2 from "../assets/project2.jpg";
 import project3 from "../assets/project3.jpg";
 import project4 from "../assets/project4.jpg";
 
-const ProjectCard = ({ title, description, imageUrl, tags, githubLink }) => (
+const ProjectCard = ({
+  title,
+  description,
+  imageUrl,
+  tags,
+  githubLink,
+  cardRef,
+}) => (
   <a
     href={githubLink}
     target="_blank"
     rel="noopener noreferrer"
     className="projectCard"
+    ref={cardRef}
   >
     <img src={imageUrl} alt={title} className="projectImage" />
     <div className="projectContent">
@@ -28,6 +36,32 @@ const ProjectCard = ({ title, description, imageUrl, tags, githubLink }) => (
 );
 
 const Projects = () => {
+  const projectRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    projectRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => {
+      if (projectRefs.current) {
+        projectRefs.current.forEach((ref) => observer.unobserve(ref));
+      }
+    };
+  }, []);
+
   const projects = [
     {
       title: "Holmsund Information",
@@ -70,7 +104,11 @@ const Projects = () => {
         <p className="main">Take a look at my portfolio</p>
       </div>
       {projects.map((project, index) => (
-        <ProjectCard key={index} {...project} />
+        <ProjectCard
+          key={index}
+          {...project}
+          cardRef={(el) => (projectRefs.current[index] = el)}
+        />
       ))}
     </div>
   );

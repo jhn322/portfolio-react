@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../styles/Navbar.css";
+import jsLogo from "../assets/js.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,9 +20,16 @@ const Navbar = () => {
     }
   };
 
+  const navigateHome = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <nav>
-      <div className="menu-icon" onClick={toggleMenu}>
+      <div className="logoContainer" onClick={navigateHome}>
+        <img src={jsLogo} alt="Logo" className="navLogo" />
+      </div>
+      <div className="menuIcon" onClick={toggleMenu}>
         <svg
           className={`ham hamRotate ham1 ${isOpen ? "active" : ""}`}
           viewBox="0 0 100 100"
