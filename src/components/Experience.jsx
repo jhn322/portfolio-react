@@ -5,7 +5,7 @@ import { FaBriefcase, FaGraduationCap } from "react-icons/fa";
 
 const TimelineItem = ({ title, company, institution, period }) => {
   const [itemRef, isVisible] = useIntersectionObserver({
-    threshold: 0.1,
+    threshold: 0.5,
     once: true,
   });
 
@@ -25,7 +25,7 @@ const TimelineItem = ({ title, company, institution, period }) => {
 
 const Experience = () => {
   const [headerRef, isHeaderVisible] = useIntersectionObserver({
-    threshold: 0.1,
+    threshold: 0.5,
     once: true,
   });
 

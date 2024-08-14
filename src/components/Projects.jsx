@@ -71,7 +71,7 @@ const ProjectCard = ({
 
 const Projects = () => {
   const [headerRef, isHeaderVisible] = useIntersectionObserver({
-    threshold: 0.1,
+    threshold: 0.5,
     once: true,
   });
 

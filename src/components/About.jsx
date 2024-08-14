@@ -27,7 +27,7 @@ const handleEmailClick = () => {
 
 const About = () => {
   const [headerRef, isHeaderVisible] = useIntersectionObserver({
-    threshold: 0.1,
+    threshold: 0.5,
     once: true,
   });
 
@@ -44,8 +44,8 @@ const About = () => {
     const deltaX = mouseX - centerX;
     const deltaY = mouseY - centerY;
 
-    const moveX = (-deltaX / width) * 20;
-    const moveY = (-deltaY / height) * 20;
+    const moveX = (-deltaX / width) * 40;
+    const moveY = (-deltaY / height) * 40;
 
     setTransform(`translate(${moveX}px, ${moveY}px)`);
   };

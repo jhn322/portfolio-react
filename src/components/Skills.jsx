@@ -23,12 +23,12 @@ const skills = [
 
 const Skills = () => {
   const [sectionRef, isIntersecting] = useIntersectionObserver({
-    threshold: 0.1,
+    threshold: 0.2,
     once: true,
   });
 
   const [headerRef, isHeaderVisible] = useIntersectionObserver({
-    threshold: 0.1,
+    threshold: 0.5,
     once: true,
   });
 
