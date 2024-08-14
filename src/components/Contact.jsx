@@ -1,8 +1,14 @@
 import { useState, useEffect } from "react";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import { RxExternalLink, RxCheck } from "react-icons/rx";
 import "../styles/Contact.css";
 
 const Contact = () => {
+  const [headerRef, isHeaderVisible] = useIntersectionObserver({
+    threshold: 0.1,
+    once: true,
+  });
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -73,10 +79,12 @@ const Contact = () => {
 
   return (
     <section id="contact">
-      <header className="me">
-        <h2>Contact Me</h2>
-        <p className="main">Get in touch with me</p>
-      </header>
+      <div ref={headerRef}>
+        <header className={`me ${isHeaderVisible ? "fadeIn" : ""}`}>
+          <h2>Contact Me</h2>
+          <p className="main">Get in touch with me</p>
+        </header>
+      </div>
       <main className="innerInfo">
         <article className="infoContainer">
           <h3 className="infoTitle">My Information</h3>

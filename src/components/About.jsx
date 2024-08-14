@@ -1,4 +1,5 @@
 import { useState } from "react";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import { RxExternalLink } from "react-icons/rx";
 import "../styles/About.css";
 import profilePic from "../assets/pfp.jpg";
@@ -25,6 +26,11 @@ const handleEmailClick = () => {
 };
 
 const About = () => {
+  const [headerRef, isHeaderVisible] = useIntersectionObserver({
+    threshold: 0.1,
+    once: true,
+  });
+
   const [transform, setTransform] = useState("translate(0, 0)");
 
   const handleMouseMove = (e) => {
@@ -52,10 +58,12 @@ const About = () => {
 
   return (
     <section className="aboutContainer" id="about">
-      <header className="me">
-        <h2>About Me</h2>
-        <p className="main">Main information about me</p>
-      </header>
+      <div ref={headerRef}>
+        <header className={`me ${isHeaderVisible ? "fadeIn" : ""}`}>
+          <h2>About Me</h2>
+          <p className="main">Main information about me</p>
+        </header>
+      </div>
       <article className="information">
         <div
           className="profileContainer"

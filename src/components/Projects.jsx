@@ -1,5 +1,6 @@
-import { useEffect, useRef } from "react";
+import React from "react";
 import { FaCode } from "react-icons/fa";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import "../styles/Projects.css";
 import project1 from "../assets/project1.jpg";
 import project2 from "../assets/project2.jpg";
@@ -13,8 +14,12 @@ const ProjectCard = ({
   tags,
   viewProject,
   codeLink,
-  cardRef,
 }) => {
+  const [cardRef, isVisible] = useIntersectionObserver({
+    threshold: 0.2,
+    once: true,
+  });
+
   const handleClick = () => {
     window.open(viewProject, "_blank", "noopener,noreferrer");
   };
@@ -25,7 +30,7 @@ const ProjectCard = ({
 
   return (
     <article
-      className="projectCard"
+      className={`projectCard ${isVisible ? "visible" : ""}`}
       ref={cardRef}
       onClick={handleClick}
       role="button"
@@ -65,31 +70,10 @@ const ProjectCard = ({
 };
 
 const Projects = () => {
-  const projectRefs = useRef([]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    projectRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
-
-    return () => {
-      projectRefs.current.forEach((ref) => {
-        if (ref) observer.unobserve(ref);
-      });
-    };
-  }, []);
+  const [headerRef, isHeaderVisible] = useIntersectionObserver({
+    threshold: 0.1,
+    once: true,
+  });
 
   const projects = [
     {
@@ -132,19 +116,15 @@ const Projects = () => {
 
   return (
     <section id="projects" className="projectsWrapper">
-      <div className="meExperience">
-        <header className="me">
+      <div className="meExperience" ref={headerRef}>
+        <header className={`me ${isHeaderVisible ? "fadeIn" : ""}`}>
           <h2>Projects</h2>
           <p className="main">Take a look at my portfolio</p>
         </header>
       </div>
       <div className="projectsContainer">
         {projects.map((project, index) => (
-          <ProjectCard
-            key={index}
-            {...project}
-            cardRef={(el) => (projectRefs.current[index] = el)}
-          />
+          <ProjectCard key={index} {...project} />
         ))}
       </div>
     </section>

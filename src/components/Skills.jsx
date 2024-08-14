@@ -1,4 +1,5 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import "../styles/Skills.css";
 
 const getCurrentDate = () => {
@@ -21,37 +22,24 @@ const skills = [
 ];
 
 const Skills = () => {
-  const [animate, setAnimate] = useState(false);
-  const sectionRef = useRef(null);
+  const [sectionRef, isIntersecting] = useIntersectionObserver({
+    threshold: 0.1,
+    once: true,
+  });
+
+  const [headerRef, isHeaderVisible] = useIntersectionObserver({
+    threshold: 0.1,
+    once: true,
+  });
+
   const [currentDate, setCurrentDate] = useState(getCurrentDate());
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setAnimate(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      {
-        threshold: 0.1,
-      }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
     const dateInterval = setInterval(() => {
       setCurrentDate(getCurrentDate());
     }, 60000);
 
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-      clearInterval(dateInterval);
-    };
+    return () => clearInterval(dateInterval);
   }, []);
 
   const skillPriority = {
@@ -111,8 +99,8 @@ const Skills = () => {
 
   return (
     <section id="skills" className="skillsContainer" ref={sectionRef}>
-      <div className="meExperience">
-        <header className="me">
+      <div className="meExperience" ref={headerRef}>
+        <header className={`me ${isHeaderVisible ? "fadeIn" : ""}`}>
           <h2>Skills</h2>
           <p className="main">My developer & software skills</p>
         </header>
@@ -156,12 +144,12 @@ const Skills = () => {
                 <div
                   className="skillBar"
                   style={{
-                    width: animate ? `${exp.percentage}%` : "0%",
+                    width: isIntersecting ? `${exp.percentage}%` : "0%",
                     transitionDelay: `${index * 0.1}s`,
                   }}
                 ></div>
                 <span className="skillPercentage">
-                  {animate ? exp.percentage : 0}%
+                  {isIntersecting ? exp.percentage : 0}%
                 </span>
               </div>
             </div>
