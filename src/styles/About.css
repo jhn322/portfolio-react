@@ -82,6 +82,14 @@
   margin-top: 1rem;
 }
 
+/* Medium screens */
+@media (min-width: 400px) and (max-width: 1023px) {
+  .buttons {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
 /* Bigger screens */
 @media (min-width: 1024px) {
   .aboutContainer {
