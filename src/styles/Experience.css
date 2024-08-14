@@ -96,6 +96,16 @@
 }
 
 /* Bigger screens */
+@media (min-width: 559px) and (max-width: 1023px) {
+  .historyContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+
+/* Bigger screens */
 @media (min-width: 1024px) {
   .experience {
     padding: 6rem 3rem;
