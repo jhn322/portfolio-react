@@ -113,21 +113,21 @@ const Skills = () => {
             I am looking to improve my skills across a diverse range of
             technologies and tools. My growing knowledge in{" "}
             <strong>React</strong> allows me to build dynamic and responsive
-            user interfaces, while my proficiency in TypeScript and{" "}
+            user web apps, while my proficiency in TypeScript and{" "}
             <strong>JavaScript</strong> also benefits. My journey in software
-            development is complemented by a hobby interest with{" "}
-            <strong>Dockers</strong> seamless containerization and deployment. I
-            am adept at <strong>GIT</strong>, ensuring collaboration and code
-            management. My understanding of back-end enhances my ability to work
-            on server-side applications, providing a full-stack development
-            perspective. <br /> <br /> Beyond programming, I like to be creative
-            with tools like <strong>Photoshop</strong> for designing visuals or{" "}
+            development is complemented by a significant hobby interest in tech.
+            I use <strong>Docker</strong> daily to seamlessly containerize and
+            deploy on a server(s). I am ample at <strong>GIT</strong>, ensuring
+            smooth collaboration and code management. My understanding of
+            back-end enhances my ability to work on server-side applications,
+            providing a full-stack development perspective. <br /> <br /> Beyond
+            programming, I prefer to be creative with tools like{" "}
+            <strong>Photoshop</strong> for designing visuals or{" "}
             <strong>Sony Vegas</strong> for video editing. My knowledge of{" "}
-            <strong>Linux</strong> systems speaks for my ability to navigate and
-            manage various operating systems effectively. Over the years, I am
-            continuously looking to improve my skills and embraced new
-            technologies, striving to deliver high-quality and innovative
-            solutions in every project I undertake.
+            <strong>Linux</strong> systems demonstrates my ability to navigate
+            and manage various operating systems effectively. Over the years, I
+            am continuously looking to improve my skills and embrace new
+            frameworks.
           </p>
         </article>
         <div className="skillItemsWrapper">

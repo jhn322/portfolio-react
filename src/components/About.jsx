@@ -82,12 +82,12 @@ const About = () => {
             I'm Johan, <span>Web Developer</span>
           </h3>
           <p>
-            Hello! I'm Johan Söderlund, a passionate new-found Web Developer. I
-            am dedicated to my work and am committed to delivering high-quality,
-            smart solutions. I see each project is an opportunity to improve and
-            learn something new, ensuring that the final product not only meets
-            but surpasses expectations. I look forward to growing professionally
-            by focusing on efficiency, functionality, and aesthetics.
+            Hello! I'm Johan Söderlund, a new passionate Web Developer. I am
+            dedicated to the work I do and am committed to delivering things I
+            can be proud of. I see each project as an opportunity to improve and
+            learn something new, ensuring that the final result surpasses the
+            previous one. I look forward to growing professionally by focusing
+            on efficiency, functionality, and aesthetics.
           </p>
           <div className="list">
             <ul className="infoList">
