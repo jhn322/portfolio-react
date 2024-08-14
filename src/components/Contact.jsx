@@ -80,7 +80,7 @@ const Contact = () => {
   return (
     <section id="contact">
       <div ref={headerRef}>
-        <header className={`me ${isHeaderVisible ? "fadeIn" : ""}`}>
+        <header className={`headline ${isHeaderVisible ? "fadeIn" : ""}`}>
           <h2>Contact Me</h2>
           <p className="main">Get in touch with me</p>
         </header>

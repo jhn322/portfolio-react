@@ -59,7 +59,7 @@ const About = () => {
   return (
     <section className="aboutContainer" id="about">
       <div ref={headerRef}>
-        <header className={`me ${isHeaderVisible ? "fadeIn" : ""}`}>
+        <header className={`headline ${isHeaderVisible ? "fadeIn" : ""}`}>
           <h2>About Me</h2>
           <p className="main">Main information about me</p>
         </header>

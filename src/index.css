@@ -85,18 +85,25 @@ button:hover {
   background-color: #300404;
 }
 
-/* Every Header text(s) */
+/* Every components header */
+.headline {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.headline.fadeIn {
+  opacity: 1;
+}
+
 .fadeIn {
   animation: fadeInAnimation 0.5s ease-out forwards;
 }
 
 @keyframes fadeInAnimation {
   from {
-    opacity: 0;
     transform: translateX(60px);
   }
   to {
-    opacity: 1;
     transform: translateX(0);
   }
 }

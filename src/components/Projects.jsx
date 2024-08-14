@@ -116,8 +116,8 @@ const Projects = () => {
 
   return (
     <section id="projects" className="projectsWrapper">
-      <div className="meExperience" ref={headerRef}>
-        <header className={`me ${isHeaderVisible ? "fadeIn" : ""}`}>
+      <div className="headlineContainer" ref={headerRef}>
+        <header className={`headline ${isHeaderVisible ? "fadeIn" : ""}`}>
           <h2>Projects</h2>
           <p className="main">Take a look at my portfolio</p>
         </header>

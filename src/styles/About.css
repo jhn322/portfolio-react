@@ -13,11 +13,11 @@
   margin: 0 auto;
 }
 
-.me {
+.headline {
   padding-bottom: 5rem;
 }
 
-.me h2 {
+.headline h2 {
   text-transform: uppercase;
   margin-bottom: -0.4rem;
 }
@@ -88,7 +88,7 @@
     padding: 6rem 3rem;
   }
 
-  .me {
+  .headline {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -96,7 +96,7 @@
     padding-left: 1.5rem;
   }
 
-  .me::before {
+  .headline::before {
     content: "";
     position: absolute;
     left: 0;

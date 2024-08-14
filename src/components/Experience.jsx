@@ -73,7 +73,7 @@ const Experience = () => {
   return (
     <section id="experience" className="experience">
       <div ref={headerRef}>
-        <header className={`me ${isHeaderVisible ? "fadeIn" : ""}`}>
+        <header className={`headline ${isHeaderVisible ? "fadeIn" : ""}`}>
           <h2>Experience</h2>
           <p className="main">My work and education history</p>
         </header>
