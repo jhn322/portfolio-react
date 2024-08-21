@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
+import { FaFire } from "react-icons/fa";
 import "../styles/Skills.css";
 
 const getCurrentDate = () => {
@@ -14,11 +15,36 @@ const skills = [
   { skill: "JavaScript", startYear: 2023, startMonth: 9 },
   { skill: "HTML & CSS", startYear: 2023, startMonth: 9 },
   { skill: "Node.JS", startYear: 2024, startMonth: 5 },
+  { skill: "Express", startYear: 2024, startMonth: 5 },
+  { skill: "TailWindCSS", startYear: 2024, startMonth: 7 },
+  { skill: "Vue.js", startYear: 2024, startMonth: 11 },
   { skill: "Docker", startYear: 2020, startMonth: 1 },
   { skill: "Photoshop", startYear: 2011, startMonth: 3 },
   { skill: "Linux", startYear: 2018, startMonth: 3 },
   { skill: "Kometa", startYear: 2021, startMonth: 1 },
   { skill: "Sony Vegas", startYear: 2011, startMonth: 3 },
+];
+
+const technologiesList1 = [
+  { name: "HTML & CSS", icon: <FaFire /> },
+  { name: "JavaScript", icon: <FaFire /> },
+  { name: "TypeScript", icon: <FaFire /> },
+  { name: "React", icon: <FaFire /> },
+  { name: "GIT", icon: <FaFire /> },
+  { name: "Figma", icon: <FaFire /> },
+  { name: "Docker", icon: <FaFire /> },
+  { name: "WhisperAI", icon: <FaFire /> },
+];
+
+const technologiesList2 = [
+  { name: "Node.js", icon: <FaFire /> },
+  { name: "Express", icon: <FaFire /> },
+  { name: "MongoDB", icon: <FaFire /> },
+  { name: "Postman", icon: <FaFire /> },
+  { name: "TailWindCSS", icon: <FaFire /> },
+  { name: "SQL", icon: <FaFire /> },
+  { name: "GraphQL", icon: <FaFire /> },
+  { name: "Vue.js", icon: <FaFire /> },
 ];
 
 const Skills = () => {
@@ -43,12 +69,13 @@ const Skills = () => {
   }, []);
 
   const skillPriority = {
-    "HTML & CSS": 4,
-    GIT: 3,
-    JavaScript: 2,
-    TypeScript: 1,
-    React: 1,
-    "Node.JS": 0,
+    JavaScript: 4,
+    TypeScript: 4,
+    React: 3,
+    "Node.JS": 2,
+    Express: 2,
+    TailWindCSS: 1,
+    "Vue.js": 0,
   };
 
   const calculateYearsOfExperience = (startYear, startMonth) => {
@@ -81,7 +108,7 @@ const Skills = () => {
       percentage += skillPriority[skill];
     }
 
-    if (skill === "Node.JS") {
+    if (skill === "Vue.js") {
       percentage -= 1;
     }
 
@@ -129,6 +156,29 @@ const Skills = () => {
             am continuously looking to improve my skills and embrace new
             frameworks.
           </p>
+          <div className="technologiesSection">
+            <h4>Some technologies I have been working with recently</h4>
+            <div className="technologiesContainer">
+              <div className="technologiesList">
+                <ul>
+                  {technologiesList1.map((tech) => (
+                    <li key={tech.name}>
+                      {tech.icon} {tech.name}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="technologiesList">
+                <ul>
+                  {technologiesList2.map((tech) => (
+                    <li key={tech.name}>
+                      {tech.icon} {tech.name}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
         </article>
         <div className="skillItemsWrapper">
           {updatedExperiences.map((exp, index) => (

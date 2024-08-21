@@ -61,6 +61,46 @@
   color: var(--bg-color);
 }
 
+.technologiesSection h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.technologiesContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.technologiesList {
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.technologiesList:last-child {
+  margin-right: 0;
+}
+
+.technologiesList h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.technologiesList ul {
+  list-style: none;
+  padding: 0;
+}
+
+.technologiesList li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.technologiesList li svg {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
 /* Bigger screens */
 @media (min-width: 1024px) {
   .headlineContainer {
