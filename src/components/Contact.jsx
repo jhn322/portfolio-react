@@ -78,97 +78,101 @@ const Contact = () => {
   }, [notification.visible]);
 
   return (
-    <section id="contact">
-      <div ref={headerRef}>
-        <header className={`headline ${isHeaderVisible ? "fadeIn" : ""}`}>
-          <h2>Contact Me</h2>
-          <p className="main">Get in touch with me</p>
-        </header>
-      </div>
-      <main className="innerInfo">
-        <article className="infoContainer">
-          <h3 className="infoTitle">My Information</h3>
-          <address>
-            <ul className="infoList">
-              <li className="infoItem">
-                <span className="label">Address:</span>
-                <span className="value">Umeå, Sweden</span>
-              </li>
-              <li className="infoItem">
-                <span className="label">Email:</span>
-                <span
-                  className="value email"
-                  onClick={() =>
-                    (window.location.href =
-                      "mailto:johan.soderlund96@gmail.com")
-                  }
-                >
-                  johan.soderlund96@gmail.com
-                  <RxExternalLink
-                    style={{ marginLeft: "0.5rem", verticalAlign: "middle" }}
-                  />
-                </span>
-              </li>
-              <li className="infoItem">
-                <span className="label">Phone:</span>
-                <span className="value">073 - 029 33 92</span>
-              </li>
-            </ul>
-          </address>
-        </article>
-        <form onSubmit={handleSubmit}>
-          <div className="formInput">
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Your Name"
-              value={formData.name}
-              onChange={handleChange}
-              aria-label="Your Name"
-              required
-            />
-          </div>
-          <div className="formInput">
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Your Email"
-              value={formData.email}
-              onChange={handleChange}
-              aria-label="Your Email"
-              required
-            />
-          </div>
-          <div className="formInput">
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Your Message"
-              value={formData.message}
-              onChange={handleChange}
-              aria-label="Your Message"
-              required
-            ></textarea>
-          </div>
-          <button type="submit" className="contactBtn">
-            Send Message
-          </button>
-        </form>
-        {notification.visible && (
-          <div
-            className={`notification ${notification.visible ? "show" : ""}`}
-            role="alert"
-          >
-            <span className="notificationMessage">{notification.message}</span>
-            <span className="checkmark">
-              <RxCheck className="checkmarkIcon" />
-            </span>
-          </div>
-        )}
-      </main>
-    </section>
+    <div className="contactContainer">
+      <section id="contact">
+        <div ref={headerRef}>
+          <header className={`headline ${isHeaderVisible ? "fadeIn" : ""}`}>
+            <h2>Contact Me</h2>
+            <p className="main">Get in touch with me</p>
+          </header>
+        </div>
+        <main className="innerInfo">
+          <article className="infoContainer">
+            <h3 className="infoTitle">My Information</h3>
+            <address>
+              <ul className="infoList">
+                <li className="infoItem">
+                  <span className="label">Address:</span>
+                  <span className="value">Umeå, Sweden</span>
+                </li>
+                <li className="infoItem">
+                  <span className="label">Email:</span>
+                  <span
+                    className="value email"
+                    onClick={() =>
+                      (window.location.href =
+                        "mailto:johan.soderlund96@gmail.com")
+                    }
+                  >
+                    johan.soderlund96@gmail.com
+                    <RxExternalLink
+                      style={{ marginLeft: "0.5rem", verticalAlign: "middle" }}
+                    />
+                  </span>
+                </li>
+                <li className="infoItem">
+                  <span className="label">Phone:</span>
+                  <span className="value">073 - 029 33 92</span>
+                </li>
+              </ul>
+            </address>
+          </article>
+          <form onSubmit={handleSubmit}>
+            <div className="formInput">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
+                aria-label="Your Name"
+                required
+              />
+            </div>
+            <div className="formInput">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email"
+                value={formData.email}
+                onChange={handleChange}
+                aria-label="Your Email"
+                required
+              />
+            </div>
+            <div className="formInput">
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Your Message"
+                value={formData.message}
+                onChange={handleChange}
+                aria-label="Your Message"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" className="contactBtn">
+              Send Message
+            </button>
+          </form>
+          {notification.visible && (
+            <div
+              className={`notification ${notification.visible ? "show" : ""}`}
+              role="alert"
+            >
+              <span className="notificationMessage">
+                {notification.message}
+              </span>
+              <span className="checkmark">
+                <RxCheck className="checkmarkIcon" />
+              </span>
+            </div>
+          )}
+        </main>
+      </section>
+    </div>
   );
 };
 

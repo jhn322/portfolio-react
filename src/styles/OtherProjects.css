@@ -9,14 +9,13 @@
 
 .projectsWrapper {
   padding: 6rem 1rem;
-  background-color: var(--bg-grey-color);
+  background-color: var(--bg-color);
 }
 
 .projectsContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 1rem;
-  background-color: var(--bg-grey-color);
 }
 
 .projectCard {
@@ -31,7 +30,7 @@
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-out,
     border 0.5s ease;
   border: 1px solid var(--text-color);
-  background-color: var(--bg-color);
+  background-color: var(--bg-grey-color);
   padding: 1rem;
 }
 
