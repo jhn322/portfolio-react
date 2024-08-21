@@ -65,36 +65,61 @@ const OtherProjects = () => {
 
   const projects = [
     {
-      title: "Holmsund Information",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet consectetur eveniet minima fugiat debitis voluptates ex. Temporibus dolore deserunt modi! Officia sapiente tempora accusantium culpa harum, ea veniam laboriosam.",
-      tags: ["React Router", "Fuzzy Search", "API"],
-      viewProject: "https://jhn-holmsund-information.netlify.app/",
-      codeLink: "https://github.com/jhn322/holmsund-information",
-    },
-    {
-      title: "Kanban Group Project",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet consectetur eveniet minima fugiat debitis voluptates ex. Temporibus dolore deserunt modi! Officia sapiente tempora accusantium culpa harum, ea veniam laboriosam.",
-      tags: ["React", "Redux", "Google Analytics"],
-      viewProject: "https://kanban-kollab.netlify.app/",
-      codeLink: "https://github.com/jhn322/kanban-group-react",
-    },
-    {
-      title: "The Dashboard",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet consectetur eveniet minima fugiat debitis voluptates ex. Temporibus dolore deserunt modi! Officia sapiente tempora accusantium culpa harum, ea veniam laboriosam.",
-      tags: ["JavaScript", "CSS", "API"],
-      viewProject: "https://jhn-dashboard.netlify.app/",
-      codeLink: "https://github.com/jhn322/dashboard-frontend",
-    },
-    {
       title: "Kometa Config",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet consectetur eveniet minima fugiat debitis voluptates ex. Temporibus dolore deserunt modi! Officia sapiente tempora accusantium culpa harum, ea veniam laboriosam.",
-      tags: ["Python", "Docker", "YAML"],
+        "Kometa is a powerful tool designed to give you complete control over your media libraries. With Kometa, you can take your customization to the next level, with granular control over metadata, collections, overlays, and much more. This is my tailor made config with an endless amount of time spent creating and perfecting every detail.",
+      tags: [
+        "Python",
+        "Docker",
+        "YAML",
+        "Metadata",
+        "API",
+        "GIT",
+        "Photoshop",
+        "Automation",
+      ],
       viewProject: "https://kometa.wiki/en/latest/",
       codeLink: "https://github.com/jhn322/kometa-config",
+    },
+    {
+      title: "Kanban Board",
+      description:
+        "This Kanban board is a versatile app designed to streamline your task management. With a user-friendly interface, it allows you to effortlessly organize tasks into customizable columns. The app supports drag-and-drop functionality, enabling smooth task movement across different stages. Additionally, it features a dynamic theme switcher, task creation and editing options, and real-time updates saved locally.",
+      tags: ["React", "API", "Google Analytics", "Theme Switcher", "Context"],
+      viewProject: "https://jhn-kanban-react.netlify.app/",
+      codeLink: "https://github.com/jhn322/kanban-board-react",
+    },
+    {
+      title: "Media Info",
+      description:
+        "This JavaScript application is a simple movie search tool that interacts with the OMDb API to fetch and display information about movies, TV shows, or anime based on user input. The application provides a user-friendly interface where users can enter the name of a movie and either click a search button to retrieve the relevant information.",
+      tags: ["JavaScript", "CSS", "API", "OMDb"],
+      viewProject: "https://jhn-media-info-app.netlify.app/",
+      codeLink: "https://github.com/jhn322/media-info-app",
+    },
+    {
+      title: "Mortgage Calculator",
+      description:
+        "This TypeScript-based application is designed to help you calculate your monthly mortgage payments, total interest, and provide a detailed amortization schedule. The app takes user input for the mortgage amount, interest rate, and loan term, then performs precise calculations using a financial formula to determine your monthly payments.",
+      tags: ["TypeScript", "JavaScript", "CSS"],
+      viewProject: "https://jhn-labb-typescript.netlify.app/",
+      codeLink: "https://github.com/jhn322/labb-typescript-frontend",
+    },
+    {
+      title: "Tic Tac Toe",
+      description:
+        "This game is a React-based application implemented using TypeScript. It leverages React's state management to track the game board's state, determine the current player, and identify when the game ends with a win, draw, or reset. The game is structured with two main components: Game and Board, each playing a crucial role in the gameplay logic and user interface.",
+      tags: ["TypeScript", "React", "Interface", "CSS"],
+      viewProject: "https://jhn-labb-typscript-react.netlify.app/",
+      codeLink: "https://github.com/jhn322/labb-typescript-react",
+    },
+    {
+      title: "Memory",
+      description:
+        "This interactive app is built on vanilla JavaScript to challenge your memory skills with a fun and engaging twist—matching pairs of Pokémon images. The game is simple to play but hard to master. As you flip cards to reveal Pokémon, try to remember their positions and match them with as few turns as possible. ",
+      tags: ["JavaScript", "CSS", "HTML"],
+      viewProject: "https://jhn322.github.io/memory/",
+      codeLink: "https://github.com/jhn322/memory",
     },
   ];
 

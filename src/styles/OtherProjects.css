@@ -20,6 +20,8 @@
 }
 
 .projectCard {
+  display: flex;
+  align-items: center;
   position: relative;
   border-radius: 15px;
   cursor: pointer;
@@ -30,7 +32,7 @@
     border 0.5s ease;
   border: 1px solid var(--text-color);
   background-color: var(--bg-color);
-  height: 28rem;
+  padding: 1rem;
 }
 
 .projectCard::after {
@@ -81,25 +83,32 @@
   right: 1rem;
   display: flex;
   justify-content: space-between;
+  padding: 1rem;
+  z-index: 100;
 }
 
 .folderIcon {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
 }
 
 .externalLinkIcon {
   color: var(--text-grey-color);
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.externalLinkIcon:hover {
+  color: var(--accent-color);
 }
 
 .projectContent {
-  padding: 2.5rem 1rem 1rem; /* Adjusted padding to accommodate the icons */
+  padding: 4.5rem 1rem 1rem;
   position: relative;
 }
 
 .projectTitle {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: var(--text-color);
@@ -116,6 +125,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  width: 80%;
 }
 
 .projectTag {
@@ -155,7 +165,7 @@
   }
 
   .projectsContainer {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     max-width: 69rem;
     margin: 0 auto;
   }

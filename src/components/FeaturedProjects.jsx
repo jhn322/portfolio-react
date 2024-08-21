@@ -2,10 +2,10 @@ import React from "react";
 import { FaGithub } from "react-icons/fa";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import "../styles/FeaturedProjects.css";
-import project1 from "../assets/project1.jpg";
-import project2 from "../assets/project2.jpg";
-import project3 from "../assets/project3.jpg";
-import project4 from "../assets/project4.jpg";
+import project1 from "../assets/project1.png";
+import project2 from "../assets/project2.png";
+import project3 from "../assets/project3.png";
+import project4 from "../assets/project4.png";
 
 const ProjectCard = ({
   title,
@@ -79,38 +79,64 @@ const FeaturedProjects = () => {
     {
       title: "Holmsund Information",
       description:
-        "An informational site with complex navigation & search to read about and view photos of Holmsund.",
+        "An informational website specifically made to highlight what Holmsund has to offer. Built with React and several libraries, it offers an easy comprehensive navigation, an accurate search query to handle every request and a wealth of images and text to inspire you.",
       imageUrl: project1,
-      tags: ["React Router", "Fuzzy Search", "API"],
+      tags: [
+        "React",
+        "Router",
+        "Fuzzy Search",
+        "CSS Modules",
+        "API",
+        "IntersectionObserver",
+        "Google Analytics",
+        "Breadcrumb",
+        "Dark Mode",
+      ],
       viewProject: "https://jhn-holmsund-information.netlify.app/",
       codeLink: "https://github.com/jhn322/holmsund-information",
     },
     {
       title: "Kanban Group Project",
       description:
-        "A collaborative group project utilizing GIT while coding in React with Redux to create a useful kanban board.",
+        "A weeks long collaborative group project utilizing GIT while coding in React with Redux to create a useful kanban board for planning. The user can create tasks, insert due date, deadline, assign memebers and move cards between columns.",
       imageUrl: project2,
-      tags: ["React", "Redux", "Google Analytics"],
+      tags: [
+        "React",
+        "Redux",
+        "CSS Modules",
+        "Store",
+        "Google Analytics",
+        "Custom Hooks",
+        "Slice",
+      ],
       viewProject: "https://kanban-kollab.netlify.app/",
       codeLink: "https://github.com/jhn322/kanban-group-react",
     },
     {
       title: "The Dashboard",
       description:
-        "A dashboard for bookmarking links, looking up the weather and writing down notes quickly.",
+        "An aesthetically pleasing dashboard meant to be your landing page for bookmarking links you wanna save for later. A quick overview of the weather at a glance, and writing down notes quickly that will be saved every time you visit the site.",
       imageUrl: project3,
-      tags: ["JavaScript", "CSS", "API"],
+      tags: ["JavaScript", "CSS", "API", "Randomizer", "Google Analytics"],
       viewProject: "https://jhn-dashboard.netlify.app/",
       codeLink: "https://github.com/jhn322/dashboard-frontend",
     },
     {
-      title: "Kometa Config",
+      title: "Quire",
       description:
-        "My config for a powerful Python tool designed to give you complete control over your media libraries.",
+        "A digital assistant for creating, saving, and editing everyday notes. Whether one intends to leave a small reminder for the next day, or create a chapter for a sketch, Quire is here to help you.",
       imageUrl: project4,
-      tags: ["Python", "Docker", "YAML"],
-      viewProject: "https://kometa.wiki/en/latest/",
-      codeLink: "https://github.com/jhn322/kometa-config",
+      tags: [
+        "JavaScript",
+        "CSS",
+        "HTML",
+        "Google Analytics",
+        "Search",
+        "Print",
+        "LocalStorage",
+      ],
+      viewProject: "https://regni.github.io/quire/",
+      codeLink: "https://github.com/jhn322/quire",
     },
   ];
 
