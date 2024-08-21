@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import "../styles/FeaturedProjects.css";
 import project1 from "../assets/project1.png";
@@ -53,16 +53,22 @@ const ProjectCard = ({
           ))}
         </div>
         {codeLink && (
-          <a
-            href={codeLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="featuredProjectCodeLink"
-            title="View Code"
-            onClick={handleCodeClick}
-          >
-            <FaGithub />
-          </a>
+          <div className="featuredIconContainer">
+            <a
+              href={codeLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="featuredProjectCodeLink"
+              title="View Code"
+              onClick={handleCodeClick}
+            >
+              <FaGithub />
+            </a>
+            <FaExternalLinkAlt
+              className="externalLinkIcon"
+              title="External Link"
+            />
+          </div>
         )}
       </div>
     </article>
@@ -79,7 +85,7 @@ const FeaturedProjects = () => {
     {
       title: "Holmsund Information",
       description:
-        "An informational website specifically made to highlight what Holmsund has to offer. Built with React and several libraries, it offers an easy comprehensive navigation, an accurate search query to handle every request and a wealth of images and text to inspire you.",
+        "An informational website designed to highlight the unique destinations Holmsund has to offer. Coded with React and a variety of npm libraries, the site provides an intuitive navigation experience, ensuring that users can easily explore Holmsund. It also features a robust fuzzy search functionality, capable of handling a wide range of queries to deliver accurate results. Additionally, it boasts a large collection of images and text content, all curated to inspire and inform visitors about the local culture and places.",
       imageUrl: project1,
       tags: [
         "React",
@@ -98,7 +104,7 @@ const FeaturedProjects = () => {
     {
       title: "Kanban Group Project",
       description:
-        "A weeks long collaborative group project utilizing GIT while coding in React with Redux to create a useful kanban board for planning. The user can create tasks, insert due date, deadline, assign memebers and move cards between columns.",
+        "A weeks-long group project leveraging GIT collaboration while coding in React with Redux to develop a highly functional Kanban board for effective planning. This project enables users to create and manage tasks with ease, including features for setting due dates, deadlines, and assigning team members. Also, users can move cards between columns to track progress and organize tasks efficiently. This Kanban board is designed to enhance productivity and streamline project management.",
       imageUrl: project2,
       tags: [
         "React",
@@ -115,7 +121,7 @@ const FeaturedProjects = () => {
     {
       title: "The Dashboard",
       description:
-        "An aesthetically pleasing dashboard meant to be your landing page for bookmarking links you wanna save for later. A quick overview of the weather at a glance, and writing down notes quickly that will be saved every time you visit the site.",
+        "An aesthetically pleasing dashboard designed to be your go-to landing page for bookmarking and organizing links you want to save for later. This interface provides a quick overview of the weather, so you can stay informed at a glance. Also, it features a convenient note-taking section where you can write down important information or reminders. Your notes are automatically saved and persist across visits. This dashboard combines functionality with a sleek design.",
       imageUrl: project3,
       tags: ["JavaScript", "CSS", "API", "Randomizer", "Google Analytics"],
       viewProject: "https://jhn-dashboard.netlify.app/",
@@ -124,7 +130,7 @@ const FeaturedProjects = () => {
     {
       title: "Quire",
       description:
-        "A digital assistant for creating, saving, and editing everyday notes. Whether one intends to leave a small reminder for the next day, or create a chapter for a sketch, Quire is here to help you.",
+        "A digital assistant designed for creating, saving, and editing everyday notes with ease. Whether you need to write down a quick reminder for the next day or develop a detailed chapter for a creative project, Quire is here to support you. Its intuitive interface allows for seamless note-taking and organization, ensuring your ideas and tasks are always at your fingertips.",
       imageUrl: project4,
       tags: [
         "JavaScript",

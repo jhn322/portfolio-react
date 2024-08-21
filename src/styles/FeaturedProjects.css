@@ -86,7 +86,7 @@
 }
 
 .featuredProjectTitle {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: var(--text-color);
@@ -103,6 +103,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  width: 70%;
 }
 
 .featuredProjectTag {
@@ -115,24 +116,42 @@
   font-weight: 500;
 }
 
-.featuredProjectCodeLink {
+.featuredIconContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 0.5rem;
   position: absolute;
   bottom: 1rem;
   right: 1rem;
+}
+
+.featuredProjectCodeLink {
   color: var(--text-grey-color);
   background-color: var(--accent-color);
   padding: 0.5rem;
   border-radius: 12px;
   font-size: 1.2rem;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .featuredProjectCodeLink:hover {
   background-color: var(--nav-color);
   color: var(--text-color);
+  transform: scale(1.1);
+}
+
+.externalLinkIcon {
+  font-size: 1.2rem;
+  color: var(--text-grey-color);
+  background-color: var(--accent-color);
+  padding: 0.5rem;
+  height: 2.2rem;
+  width: 2.2rem;
+  border-radius: 12px;
+  cursor: pointer;
 }
 
 /* Bigger screens */
@@ -142,8 +161,48 @@
   }
 
   .featuredProjectsContainer {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 69rem;
     margin: 0 auto;
+  }
+
+  .featuredProjectCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    border: 1px solid var(--text-color);
+    border-radius: 15px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-out,
+      border 0.5s ease;
+  }
+
+  .featuredProjectCard:nth-child(even) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "content image";
+  }
+
+  .featuredProjectCard:nth-child(even) .featuredProjectContent {
+    grid-area: content;
+  }
+
+  .projectImage {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .featuredProjectContent {
+    padding: 1rem;
+    margin: 0 1rem;
+  }
+
+  .featuredProjectDescription {
+    margin-bottom: 2rem;
   }
 }

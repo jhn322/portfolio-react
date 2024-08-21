@@ -23,7 +23,7 @@
   opacity: 0;
   visibility: hidden;
   transition: background-color 0.3s ease, opacity 0.3s ease,
-    visibility 0.3s ease;
+    visibility 0.3s ease, transform 0.3s ease;
 }
 
 .scrollUp.visible {
@@ -33,4 +33,5 @@
 
 .scrollUp:hover {
   background-color: var(--nav-color);
+  transform: scale(1.1);
 }

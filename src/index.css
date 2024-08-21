@@ -22,9 +22,10 @@
 
 a {
   font-weight: 500;
-  color: #f0f0f0;
+  color: var(--text-color);
   text-decoration: inherit;
 }
+
 a:hover {
   color: var(--accent-color);
 }
@@ -118,4 +119,12 @@ button:hover {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.headline h2 {
+  line-height: 3.5rem;
+}
+
+.headline p {
+  margin-top: 0.6rem;
 }

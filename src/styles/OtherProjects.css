@@ -93,12 +93,15 @@
 .externalLinkIcon {
   color: var(--text-grey-color);
   font-size: 1.6rem;
+  padding: 0.6rem;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 }
 
 .externalLinkIcon:hover {
-  color: var(--accent-color);
+  color: var(--text-color);
+  background-color: var(--nav-color);
+  transform: scale(1.1);
 }
 
 .projectContent {
@@ -149,12 +152,13 @@
   padding: 0.5rem;
   border-radius: 12px;
   font-size: 1.2rem;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 }
 
 .projectCodeLink:hover {
   background-color: var(--nav-color);
   color: var(--text-color);
+  transform: scale(1.1);
 }
 
 /* Bigger screens */
