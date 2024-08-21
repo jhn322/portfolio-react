@@ -28,7 +28,6 @@ const ProjectCard = ({ title, description, tags, viewProject, codeLink }) => {
     >
       <div className="projectIcons">
         <FaFolder className="folderIcon" />
-        <FaExternalLinkAlt className="externalLinkIcon" />
       </div>
       <div className="projectContent">
         <h3 className="projectTitle">{title}</h3>
@@ -41,16 +40,22 @@ const ProjectCard = ({ title, description, tags, viewProject, codeLink }) => {
           ))}
         </div>
         {codeLink && (
-          <a
-            href={codeLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="projectCodeLink"
-            title="View Code"
-            onClick={handleCodeClick}
-          >
-            <FaGithub />
-          </a>
+          <div className="otherIcons">
+            <a
+              href={codeLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="featuredProjectCodeLink"
+              title="View Code"
+              onClick={handleCodeClick}
+            >
+              <FaGithub />
+            </a>
+            <FaExternalLinkAlt
+              className="externalLinkIcon"
+              title="External Link"
+            />
+          </div>
         )}
       </div>
     </article>

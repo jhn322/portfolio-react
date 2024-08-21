@@ -54,7 +54,7 @@
   .icon:hover {
     color: var(--text-color);
     background-color: var(--nav-color);
-    transform: scale(1.1);
+    transform: scale(1.1) rotate(-5deg);
   }
 
   .icon1 {
