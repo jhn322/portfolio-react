@@ -7,6 +7,10 @@
 }
 
 .scrollUp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
   position: fixed;
   bottom: 25px;
   right: 1.3rem;
@@ -15,10 +19,6 @@
   height: 2.4rem;
   padding: 0.2rem;
   border-radius: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
   z-index: 21;
   opacity: 0;
   visibility: hidden;

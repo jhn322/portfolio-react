@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.iconContainer {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .iconContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 25px;
+    left: 1.3rem;
+    z-index: 50;
+  }
+
+  .iconWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    text-decoration: none;
+    padding: 0.4rem;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: var(--accent-color);
+    transition: background-color 0.3s ease;
+  }
+
+  .icon:hover {
+    color: var(--text-color);
+    background-color: var(--nav-color);
+  }
+
+  .icon1 {
+    margin-bottom: 1rem;
+  }
+}

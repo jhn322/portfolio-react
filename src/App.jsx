@@ -8,6 +8,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollUp from "./components/ScrollUp";
+import Icons from "./components/Icons";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Contact />
         <Footer />
         <ScrollUp />
+        <Icons />
       </main>
     </div>
   );
