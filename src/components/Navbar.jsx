@@ -4,12 +4,12 @@ import jsLogo from "../assets/js.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isWideScreen, setIsWideScreen] = useState(window.innerWidth >= 1024);
+  const [isWideScreen, setIsWideScreen] = useState(window.innerWidth >= 1200);
 
   useEffect(() => {
     const handleResize = () => {
       requestAnimationFrame(() => {
-        setIsWideScreen(window.innerWidth >= 1024);
+        setIsWideScreen(window.innerWidth >= 1200);
       });
     };
 
@@ -35,7 +35,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`navbar ${isWideScreen ? "wideScreen" : ""}`}>
+    <nav
+      className={`navbar ${isWideScreen ? "wideScreen" : ""} ${
+        isOpen ? "menuOpen" : ""
+      }`}
+    >
       <div
         className="logoContainer"
         onClick={navigateHome}
