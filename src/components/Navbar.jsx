@@ -10,13 +10,18 @@ const Navbar = () => {
   useEffect(() => {
     const handleResize = () => {
       requestAnimationFrame(() => {
-        setIsWideScreen(window.innerWidth >= 1200);
+        const isNowWideScreen = window.innerWidth >= 1200;
+        setIsWideScreen(isNowWideScreen);
+
+        if (isNowWideScreen && isOpen) {
+          setIsOpen(false);
+        }
       });
     };
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [isOpen]);
 
   const toggleMenu = () => {
     setIsOpen((prev) => !prev);
