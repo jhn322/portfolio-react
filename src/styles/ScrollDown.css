@@ -7,13 +7,25 @@
 }
 
 .scrollDown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  bottom: 20px;
-  left: 50%;
+  bottom: 23.5rem;
+  right: 0;
   transform: translateX(-50%);
   cursor: pointer;
   z-index: 99;
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0.2rem;
+  background-color: var(--accent-color);
+  border-radius: 12px;
   transition: background-color 0.3s;
+}
+
+.scrollDown:hover {
+  background-color: var(--nav-color);
 }
 
 .scrollIcon {
@@ -34,4 +46,23 @@
 
 .jump {
   animation: jump 0.5s ease-in-out;
+}
+
+@media screen and (min-width: 1200px) {
+  .scrollDown {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 99;
+    transition: background-color 0.3s;
+  }
+
+  .scrollDown:hover {
+    background-color: transparent;
+  }
 }
