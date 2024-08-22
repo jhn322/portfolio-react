@@ -16,22 +16,42 @@ body {
   z-index: 1;
 }
 
+.parallax::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
 .content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
+  text-align: left;
   color: var(--text-color);
   z-index: 2;
-  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
 }
 
 .content h1 {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   margin: 0;
   padding: 0;
   text-transform: uppercase;
+  line-height: 3rem;
+}
+
+.textContainer {
+  margin: 6rem 0 2rem 0;
 }
 
 .name span {
@@ -39,8 +59,8 @@ body {
 }
 
 .typewriterContainer {
-  font-size: 1.5rem;
-  margin: 10px 0 0;
+  font-size: 1.6rem;
+  margin: 0.6rem 0 0;
   padding: 0;
   height: 1.5em;
   line-height: 1.5em;
@@ -49,6 +69,7 @@ body {
 .typewriter {
   display: inline-block;
   overflow: hidden;
+  font-weight: 500;
   border-right: 0.15em solid var(--text-color);
   white-space: nowrap;
   animation: blink-caret 0.75s step-end infinite;
@@ -64,13 +85,69 @@ body {
   }
 }
 
-.parallax::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+.text,
+.headerBtn {
+  margin-top: 1rem;
+  font-weight: 400;
+}
+
+.lottieAnimation {
+  width: 16rem;
+  height: 16rem;
+}
+
+.headerBtn button {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+@media screen and (min-width: 1200px) {
+  .content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 45%;
+  }
+
+  .content h1 {
+    font-size: 3.5rem;
+  }
+
+  .textContainer {
+    position: relative;
+    z-index: 2;
+  }
+
+  .typewriterContainer {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+  }
+
+  .lottieAnimation {
+    position: absolute;
+    right: 0;
+    width: 22rem;
+    height: 22rem;
+    margin-left: 0;
+    z-index: 1;
+  }
+
+  .text {
+    max-width: 60%;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+
+  .headerBtn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 1.5rem;
+  }
+
+  .headerBtn button {
+    padding: 1rem 1.6rem;
+    font-size: 1.4rem;
+  }
 }

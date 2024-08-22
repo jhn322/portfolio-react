@@ -129,7 +129,7 @@ const OtherProjects = () => {
   ];
 
   return (
-    <section id="projects" className="projectsWrapper">
+    <section className="projectsWrapper">
       <div className="headlineContainer" ref={headerRef}>
         <header className={`headline ${isHeaderVisible ? "fadeIn" : ""}`}>
           <h2>Other Projects</h2>

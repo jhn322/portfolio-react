@@ -1,14 +1,16 @@
 import { useState, useEffect } from "react";
 import HeaderImage from "../assets/header.jpg";
 import ScrollDown from "./ScrollDown";
+import Lottie from "react-lottie-player";
+import headerAnimation from "../json/headerAnimation.json";
 import "../styles/Header.css";
 
 const Header = () => {
   const phrases = [
-    "Web Developer",
-    "Media Enthusiast",
-    "Photo & Video Editing",
-    "Linux & Docker Deployment",
+    "Web Developer.",
+    "Media Enthusiast.",
+    "Photo & Video Editing.",
+    "Linux & Docker Deployment.",
   ];
 
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
@@ -47,15 +49,43 @@ const Header = () => {
     backgroundSize: "cover",
   };
 
+  const handleScroll = (event) => {
+    event.preventDefault();
+    const targetId = "projects";
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <header id="home" className="parallax" style={parallaxStyle}>
       <div className="content">
-        <h1 className="name">
-          Johan <span>Söderlund</span>
-        </h1>
-        <p className="typewriterContainer">
-          <span className="typewriter">{displayedText}</span>
-        </p>
+        <div className="textContainer">
+          <h1 className="name">
+            Johan <span>Söderlund</span>
+          </h1>
+          <p className="typewriterContainer">
+            <span className="typewriter">{displayedText}</span>
+          </p>
+          <p className="text">
+            I'm a web developer from Umeå with a passion for creating modern web
+            solutions. With increasing experience in coding and a talent for
+            problem-solving, I excel at transforming complex challenges into
+            reality.
+          </p>
+          <div className="headerBtn">
+            <a href="#projects" onClick={handleScroll}>
+              <button>Explore my Projects!</button>
+            </a>
+          </div>
+        </div>
+        <Lottie
+          loop
+          animationData={headerAnimation}
+          play
+          className="lottieAnimation"
+        />
       </div>
       <ScrollDown />
     </header>

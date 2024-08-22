@@ -77,13 +77,15 @@ button {
   font-size: 1rem;
   font-weight: 600;
   font-family: inherit;
-  background-color: var(--accent-color);
+  background-color: transparent;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  border: 2px solid var(--accent-color);
 }
 
 button:hover {
-  background-color: #300404;
+  transform: scale(1.05);
+  background-color: var(--accent-color);
 }
 
 /* Every components header */
