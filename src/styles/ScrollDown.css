@@ -21,7 +21,7 @@
   padding: 0.2rem;
   background-color: var(--accent-color);
   border-radius: 12px;
-  transition: background-color 0.3s;
+  transition: background-color 0.2s;
 }
 
 .scrollDown:hover {
@@ -59,7 +59,7 @@
     background-color: transparent;
     cursor: pointer;
     z-index: 99;
-    transition: background-color 0.3s;
+    transition: background-color 0.2s;
   }
 
   .scrollDown:hover {

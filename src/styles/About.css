@@ -4,7 +4,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Assistant", sans-serif;
 }
 
 .aboutContainer {
@@ -66,7 +65,7 @@
 }
 
 .email {
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
   cursor: pointer;
 }
 
@@ -108,9 +107,9 @@
     content: "";
     position: absolute;
     left: 0;
-    top: 30%;
+    top: 25%;
     transform: translateY(-50%);
-    height: 45%;
+    height: 50%;
     width: 5px;
     background-color: var(--accent-color);
   }

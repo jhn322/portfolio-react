@@ -1,5 +1,5 @@
 :root {
-  font-family: "Assistant", sans-serif;
+  font-family: "Archivo", sans-serif;
   line-height: 1.5;
   font-weight: 300;
   font-synthesis: none;
@@ -9,6 +9,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
+  --bg-color: #030303;
+  --bg-color: #090909;
+  --bg-color: #030303;
 
   --bg-color: #030303;
   --bg-grey-color: #060606;
@@ -24,6 +28,7 @@ a {
   font-weight: 500;
   color: var(--text-color);
   text-decoration: inherit;
+  font-family: "Archivo", sans-serif;
 }
 
 a:hover {
@@ -41,9 +46,11 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   color: var(--text-color);
   font-weight: 600;
+  font-family: "Archivo", sans-serif;
 }
 
 h1 {
@@ -66,6 +73,11 @@ h4 {
 p {
   color: var(--text-color);
   margin-bottom: 0.8rem;
+  font-family: "Noto Sans", sans-serif;
+}
+
+span {
+  font-family: "Archivo", sans-serif;
 }
 
 button {
@@ -77,15 +89,33 @@ button {
   font-size: 1rem;
   font-weight: 600;
   font-family: inherit;
-  background-color: transparent;
+  background-color: var(--accent-color);
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.1s ease;
-  border: 2px solid var(--accent-color);
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 button:hover {
   transform: scale(1.05);
-  background-color: var(--accent-color);
+  background-color: var(--nav-color);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+  border-radius: 0.7rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--nav-color);
+  border-radius: 0.7rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--nav-color);
 }
 
 /* Every components header */
@@ -96,6 +126,14 @@ button:hover {
 
 .headline.fadeIn {
   opacity: 1;
+}
+
+.headline h2 {
+  line-height: 3.5rem;
+}
+
+.headline p {
+  margin-top: 0.6rem;
 }
 
 .fadeIn {
@@ -121,12 +159,4 @@ button:hover {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.headline h2 {
-  line-height: 3.5rem;
-}
-
-.headline p {
-  margin-top: 0.6rem;
 }

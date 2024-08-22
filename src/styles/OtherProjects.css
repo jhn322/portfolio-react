@@ -43,7 +43,7 @@
   background: linear-gradient(90deg, #cb0000, #bd6212, #cb0000, #cb0000);
   background-size: 200% 100%;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.2s ease;
 }
 
 .projectCard:hover::after {
@@ -93,7 +93,7 @@
   font-size: 1.6rem;
   padding: 0.6rem;
   cursor: pointer;
-  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
 }
 
 .externalLinkIcon:hover {
@@ -112,7 +112,7 @@
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: var(--text-color);
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
 }
 
 .projectDescription {
@@ -150,7 +150,7 @@
   padding: 0.5rem;
   border-radius: 12px;
   font-size: 1.2rem;
-  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
 }
 
 .projectCodeLink:hover {

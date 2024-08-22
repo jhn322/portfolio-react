@@ -4,7 +4,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Assistant", sans-serif;
 }
 
 .contactContainer {
@@ -40,13 +39,14 @@ form {
 input[type="text"],
 input[type="email"],
 textarea {
+  font-family: "Noto Sans", sans-serif;
   padding: 1rem 0;
   font-size: 1rem;
   border: none;
   border-bottom: 1px solid var(--text-color);
   color: var(--text-color);
   background-color: transparent;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.2s ease;
 }
 
 input[type="text"]::placeholder,
@@ -67,7 +67,7 @@ textarea {
 }
 
 .contactBtn {
-  max-width: 9.05rem;
+  max-width: 10rem;
 }
 
 .notification {
