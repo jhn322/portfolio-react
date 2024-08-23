@@ -10,10 +10,12 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollUp from "./components/ScrollUp";
 import Icons from "./components/Icons";
+// import CircleBg from "./components/LottieCircle";
 
 function App() {
   return (
     <div className="App">
+      {/* <CircleBg /> */}
       <Navbar />
       <Header />
       <main>
