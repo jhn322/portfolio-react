@@ -6,10 +6,6 @@
   padding: 0;
 }
 
-.contactContainer {
-  background-color: var(--bg-grey-color);
-}
-
 section#contact {
   padding: 6rem 1rem;
   margin: 0 auto;

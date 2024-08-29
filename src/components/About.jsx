@@ -79,15 +79,15 @@ const About = () => {
         </div>
         <div className="contentContainer">
           <h3 className="infoHeadline">
-            I'm Johan, <span>Web Developer</span>
+            Johan Söderlund, <span>Web Developer</span>
           </h3>
           <p>
-            Hello! I'm Johan Söderlund, a new passionate Web Developer. I am
-            dedicated to the work I do and am committed to delivering things I
-            can be proud of. I see each project as an opportunity to improve and
-            learn something new, ensuring that the final result surpasses the
-            previous one. I look forward to growing professionally by focusing
-            on efficiency, functionality, and aesthetics.
+            As a new passionate Web Developer I am dedicated to my craft and am
+            committed to delivering things I can be proud of. I see each project
+            as an opportunity to improve and learn something new, ensuring that
+            the final result surpasses the previous one. I look forward to
+            growing professionally by focusing on efficiency, functionality, and
+            aesthetics.
           </p>
           <div className="list">
             <ul className="infoList">

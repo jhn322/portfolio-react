@@ -10,14 +10,15 @@
   margin: 0;
   padding: 0;
 
-  --bg-color: #030303;
-  --bg-grey-color: #060606;
-  --nav-color: #300404;
-  --nav-transparent: rgba(48, 4, 4, 0.8);
+  --bg-color: #0a0a0a;
+  --bg-alternate: #050505;
+  --nav-color: rgba(89, 8, 8, 0.9);
+  --nav-menu: rgba(41, 4, 4, 0.95);
+  --hover-color: #590808;
   --border-color: #101010;
   --text-color: #f0f0f0;
   --text-grey-color: #d1d1d1;
-  --accent-color: #bd6212;
+  --accent-color: #d91616;
 }
 
 a {
@@ -97,7 +98,7 @@ button:hover {
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 0.8rem;
+  width: 0.6rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -106,12 +107,12 @@ button:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--nav-color);
+  background: var(--accent-color);
   border-radius: 0.7rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--nav-color);
+  background: var(--accent-color);
 }
 
 /* Every components header */

@@ -6,32 +6,46 @@
   padding: 0;
 }
 
-body {
-  width: 100%;
-}
-
-.parallax {
-  height: 136vh;
+.header {
   position: relative;
   z-index: 1;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    #2b0505,
+    #570a0a,
+    #750e0e,
+    rgb(119, 14, 14)
+  );
 }
 
-.parallax::before {
-  content: "";
+.header h3 {
+  color: var(--accent-color);
+}
+
+.custom-shape-divider-bottom-1724873734 {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1724873734 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 25rem;
+}
+
+.custom-shape-divider-bottom-1724873734 .shape-fill {
+  fill: var(--bg-color);
 }
 
 .content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   text-align: left;
   color: var(--text-color);
   z-index: 2;
@@ -39,7 +53,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 1rem;
+  padding: 4rem 1rem;
 }
 
 .content h1 {
@@ -50,12 +64,13 @@ body {
   line-height: 4rem;
 }
 
-.textContainer {
-  margin: 6rem 0 2rem 0;
+.contentWrapper {
+  max-width: 69rem;
+  position: relative;
 }
 
-.name span {
-  color: var(--accent-color);
+.textContainer {
+  margin: 6rem 0 2rem 0;
 }
 
 .typewriterContainer {
@@ -91,6 +106,10 @@ body {
   font-weight: 400;
 }
 
+.responsiveText {
+  max-width: min(100%, 70ch);
+}
+
 .lottieAnimation {
   width: 16rem;
   height: 16rem;
@@ -101,25 +120,21 @@ body {
   font-size: 1.4rem;
 }
 
-@media screen and (min-width: 1200px) {
-  .parallax {
-    height: 100vh;
-  }
-
-  .contentWrapper {
-    margin-top: 0;
-  }
-
+@media screen and (min-width: 1024px) {
   .content {
-    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
-    max-width: 45%;
+    justify-content: center;
+    padding: 4rem 3rem;
   }
 
   .content h1 {
     font-size: 3.5rem;
+  }
+
+  .contentWrapper {
+    margin-top: 0;
   }
 
   .textContainer {
@@ -133,11 +148,11 @@ body {
   }
 
   .lottieAnimation {
-    position: absolute;
-    right: 0;
     width: 22rem;
     height: 22rem;
-    margin-left: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
     z-index: 1;
   }
 

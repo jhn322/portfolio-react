@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import HeaderImage from "../assets/header.jpg";
-import ScrollDown from "./ScrollDown";
 import Lottie from "react-lottie-player";
 import headerAnimation from "../json/headerAnimation.json";
 import "../styles/Header.css";
@@ -41,13 +39,6 @@ const Header = () => {
 
     return () => clearTimeout(timer);
   }, [displayedText, currentPhraseIndex, isDeleting]);
-  const parallaxStyle = {
-    backgroundImage: `url(${HeaderImage})`,
-    backgroundAttachment: "fixed",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-  };
 
   const handleScroll = (event) => {
     event.preventDefault();
@@ -59,17 +50,16 @@ const Header = () => {
   };
 
   return (
-    <header id="home" className="parallax" style={parallaxStyle}>
+    <header id="home" className="header">
       <div className="content">
         <div className="contentWrapper">
           <div className="textContainer">
-            <h1 className="name">
-              Johan <span>Söderlund</span>
-            </h1>
+            <h3>Hey, my name is</h3>
+            <h1 className="name">Johan.</h1>
             <p className="typewriterContainer">
               <span className="typewriter">{displayedText}</span>
             </p>
-            <p className="text">
+            <p className="text responsiveText">
               I'm a web developer from Umeå with a passion for creating modern
               web solutions. With increasing experience in coding and a passion
               for problem-solving, I excel at transforming complex challenges
@@ -83,15 +73,27 @@ const Header = () => {
               </a>
             </div>
           </div>
+          <Lottie
+            loop
+            animationData={headerAnimation}
+            play
+            className="lottieAnimation"
+          />
         </div>
-        <Lottie
-          loop
-          animationData={headerAnimation}
-          play
-          className="lottieAnimation"
-        />
       </div>
-      <ScrollDown />
+      <div className="custom-shape-divider-bottom-1724873734">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+            className="shape-fill"
+          ></path>
+        </svg>
+      </div>
     </header>
   );
 };

@@ -8,14 +8,12 @@
 
 .featuredProjectsWrapper {
   padding: 6rem 1rem;
-  background-color: var(--bg-grey-color);
 }
 
 .featuredProjectsContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 1rem;
-  background-color: var(--bg-grey-color);
 }
 
 .featuredProjectCard {
@@ -38,7 +36,7 @@
   right: 0;
   bottom: 0;
   height: 6px;
-  background: linear-gradient(90deg, #cb0000, #bd6212, #cb0000, #cb0000);
+  background: linear-gradient(90deg, #630909, #fd1616, #630909, #630909);
   background-size: 200% 100%;
   opacity: 0;
   transition: opacity 0.2s ease;
@@ -107,7 +105,7 @@
 
 .featuredProjectTag {
   color: var(--text-grey-color);
-  background-color: var(--bg-grey-color);
+  background-color: var(--bg-alternate);
   padding: 0.25rem 0.5rem;
   border: 1px solid var(--text-color);
   border-radius: 12px;
@@ -137,7 +135,7 @@
 }
 
 .featuredProjectCodeLink:hover {
-  background-color: var(--nav-color);
+  background-color: var(--hover-color);
   color: var(--text-color);
   transform: scale(1.1);
 }

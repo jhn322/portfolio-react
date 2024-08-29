@@ -32,6 +32,12 @@
 }
 
 .scrollUp:hover {
-  background-color: var(--nav-color);
+  background-color: var(--hover-color);
   transform: scale(1.1);
+}
+
+.scrollIcon {
+  height: 2.4rem;
+  width: 2.4rem;
+  padding: 0.2rem;
 }

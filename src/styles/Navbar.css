@@ -22,7 +22,8 @@ nav {
   margin-top: 1rem;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  background-color: var(--nav-transparent);
+  background-color: var(--nav-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid #4f0707;
   padding: 0.3rem 0 0 0.7rem;
   transition: border-radius 0.5s ease-in-out;
@@ -102,7 +103,7 @@ ul.menu {
   border-radius: 0 0 15px 15px;
   margin: 1px 0;
   padding: 0;
-  background-color: var(--nav-transparent);
+  background-color: var(--nav-color);
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out,
@@ -113,6 +114,7 @@ ul.open {
   max-height: 500px;
   padding: 1rem 0;
   border-radius: 0 0 15px 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 ul.closed {
@@ -139,6 +141,10 @@ li {
   transition: color 0.2s ease;
 }
 
+.navItem:hover {
+  color: var(--text-color);
+}
+
 .navIconsContainer {
   display: flex;
   flex-direction: row;
@@ -162,9 +168,9 @@ li {
   transition: background-color 0.2s ease;
 }
 
-.icon:hover {
+.navIcon:hover {
   color: var(--text-color);
-  background-color: var(--nav-color);
+  background-color: var(--hover-color);
 }
 
 @media (min-width: 1200px) {

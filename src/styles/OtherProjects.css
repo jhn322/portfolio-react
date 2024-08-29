@@ -9,7 +9,6 @@
 
 .projectsWrapper {
   padding: 6rem 1rem;
-  background-color: var(--bg-color);
 }
 
 .projectsContainer {
@@ -30,7 +29,7 @@
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-out,
     border 0.5s ease;
   border: 1px solid var(--text-color);
-  background-color: var(--bg-grey-color);
+  background-color: var(--bg-alternate);
 }
 
 .projectCard::after {
@@ -40,7 +39,7 @@
   right: 0;
   bottom: 0;
   height: 6px;
-  background: linear-gradient(90deg, #cb0000, #bd6212, #cb0000, #cb0000);
+  background: linear-gradient(90deg, #630909, #fd1616, #630909, #630909);
   background-size: 200% 100%;
   opacity: 0;
   transition: opacity 0.2s ease;
@@ -98,7 +97,7 @@
 
 .externalLinkIcon:hover {
   color: var(--text-color);
-  background-color: var(--nav-color);
+  background-color: var(--hover-color);
   transform: scale(1.1);
 }
 
@@ -154,7 +153,7 @@
 }
 
 .projectCodeLink:hover {
-  background-color: var(--nav-color);
+  background-color: var(--hover-color);
   color: var(--text-color);
   transform: scale(1.1);
 }

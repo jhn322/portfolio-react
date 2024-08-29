@@ -10,7 +10,6 @@
 .skillsContainer {
   margin: 0 auto;
   padding: 6rem 1rem;
-  background-color: var(--bg-grey-color);
 }
 
 .skillItem {
@@ -99,6 +98,7 @@
 .technologiesList li svg {
   margin-right: 0.5rem;
   font-size: 1.2rem;
+  color: var(--accent-color);
 }
 
 /* Bigger screens */
