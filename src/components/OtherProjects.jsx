@@ -1,7 +1,7 @@
 import React from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import Lottie from "react-lottie-player";
-import lottieCircle from "../json/lottieCircle.json";
+import lottieBubble from "../json/lottieBubble.json";
 import { FaGithub, FaFolder, FaExternalLinkAlt } from "react-icons/fa";
 
 import "../styles/OtherProjects.css";
@@ -137,9 +137,9 @@ const OtherProjects = () => {
         <header className={`headline ${isHeaderVisible ? "fadeIn" : ""}`}>
           <Lottie
             loop
-            animationData={lottieCircle}
+            animationData={lottieBubble}
             play
-            className="lottieCircle3"
+            className="lottieBubble3"
           />
           <h2>Other Projects</h2>
           <p className="main">More noteworthy projects to check out</p>

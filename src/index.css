@@ -163,9 +163,9 @@ button:hover {
   z-index: -1;
 }
 
-.lottieCircle,
-.lottieCircle2,
-.lottieCircle3 {
+.lottieBubble,
+.lottieBubble2,
+.lottieBubble3 {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -174,26 +174,26 @@ button:hover {
   z-index: -1;
 }
 
-.lottieCircle {
+.lottieBubble {
   transform: translate(-50%, -50%) rotate(-90deg);
 }
 
-.lottieCircle2 {
+.lottieBubble2 {
   transform: translate(-50%, -50%);
 }
 
-.lottieCircle3 {
+.lottieBubble3 {
   transform: translate(-50%, -50%) rotate(180deg);
 }
 
 @media screen and (min-width: 1024px) {
-  .lottieCircle,
-  .lottieCircle2,
-  .lottieCircle3 {
+  .lottieBubble,
+  .lottieBubble2,
+  .lottieBubble3 {
     left: 10%;
   }
 
-  .lottieCircle3 {
+  .lottieBubble3 {
     left: 0;
   }
 }

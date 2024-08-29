@@ -1,7 +1,7 @@
 import React from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import Lottie from "react-lottie-player";
-import lottieCircleAlt from "../json/lottieCircleAlt.json";
+import lottieBubbleAlt from "../json/lottieBubbleAlt.json";
 import { FaBriefcase, FaGraduationCap } from "react-icons/fa";
 import "../styles/Experience.css";
 
@@ -78,9 +78,9 @@ const Experience = () => {
         <header className={`headline ${isHeaderVisible ? "fadeIn" : ""}`}>
           <Lottie
             loop
-            animationData={lottieCircleAlt}
+            animationData={lottieBubbleAlt}
             play
-            className="lottieCircle"
+            className="lottieBubble"
           />
           <h2>Experience</h2>
           <p className="main">My work and education history</p>

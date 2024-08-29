@@ -2,7 +2,7 @@ import React from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import Lottie from "react-lottie-player";
-import lottieCircle from "../json/lottieCircle.json";
+import lottieBubble from "../json/lottieBubble.json";
 import "../styles/FeaturedProjects.css";
 import project1 from "../assets/project1.png";
 import project2 from "../assets/project2.png";
@@ -154,9 +154,9 @@ const FeaturedProjects = () => {
         <header className={`headline ${isHeaderVisible ? "fadeIn" : ""}`}>
           <Lottie
             loop
-            animationData={lottieCircle}
+            animationData={lottieBubble}
             play
-            className="lottieCircle2"
+            className="lottieBubble2"
           />
           <h2>Featured Projects</h2>
           <p className="main">Take a look at my portfolio</p>
