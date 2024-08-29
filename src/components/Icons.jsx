@@ -40,7 +40,7 @@ const Icon = ({ href, ariaLabel, icon: IconComponent, label, subtext }) => {
     >
       <IconComponent size={IconComponent === FaEnvelope ? 24 : 28} />
       {isHovered && (
-        <div className="label">
+        <div className="iconLabel">
           <span className="labelText">{label}</span>
           {subtext && <span className="subtext">{subtext}</span>}
         </div>
@@ -55,21 +55,21 @@ const Icons = () => {
       href: "https://github.com/jhn322",
       ariaLabel: "GitHub Profile",
       icon: FaGithub,
-      label: "GitHub",
+      iconLabel: "GitHub",
       subtext: "Explore my code",
     },
     {
       href: "https://www.linkedin.com/in/johan-s%C3%B6derlund-31b9862b7/",
       ariaLabel: "LinkedIn Profile",
       icon: FaLinkedin,
-      label: "LinkedIn",
+      iconLabel: "LinkedIn",
       subtext: "Connect with me",
     },
     {
       href: "#",
       ariaLabel: "Send Email",
       icon: FaEnvelope,
-      label: "Email",
+      iconLabel: "Email",
       subtext: "Get in touch",
       onClick: openMailClient,
     },
