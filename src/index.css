@@ -157,3 +157,43 @@ button:hover {
     transform: translateY(0);
   }
 }
+
+.headlineContainer {
+  position: relative;
+  z-index: -1;
+}
+
+.lottieCircle,
+.lottieCircle2,
+.lottieCircle3 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  max-width: 35rem;
+  z-index: -1;
+}
+
+.lottieCircle {
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.lottieCircle2 {
+  transform: translate(-50%, -50%);
+}
+
+.lottieCircle3 {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+@media screen and (min-width: 1024px) {
+  .lottieCircle,
+  .lottieCircle2,
+  .lottieCircle3 {
+    left: 10%;
+  }
+
+  .lottieCircle3 {
+    left: 0;
+  }
+}

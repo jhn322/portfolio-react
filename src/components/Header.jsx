@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Lottie from "react-lottie-player";
-import headerAnimation from "../json/headerAnimation.json";
+import lottieHeader from "../json/lottieHeader.json";
 import "../styles/Header.css";
 
 const Header = () => {
@@ -75,9 +75,9 @@ const Header = () => {
           </div>
           <Lottie
             loop
-            animationData={headerAnimation}
+            animationData={lottieHeader}
             play
-            className="lottieAnimation"
+            className="lottieHeader"
           />
         </div>
       </div>

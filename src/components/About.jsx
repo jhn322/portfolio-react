@@ -1,8 +1,8 @@
 import { useState } from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import { RxExternalLink } from "react-icons/rx";
-import "../styles/About.css";
 import profilePic from "../assets/pfp.jpg";
+import "../styles/About.css";
 
 // Calculate my age
 const calculateAge = (birthDate) => {

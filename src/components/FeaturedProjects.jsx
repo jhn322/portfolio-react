@@ -1,6 +1,8 @@
 import React from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
+import Lottie from "react-lottie-player";
+import lottieCircle from "../json/lottieCircle.json";
 import "../styles/FeaturedProjects.css";
 import project1 from "../assets/project1.png";
 import project2 from "../assets/project2.png";
@@ -150,6 +152,12 @@ const FeaturedProjects = () => {
     <section id="projects" className="featuredProjectsWrapper">
       <div className="headlineContainer" ref={headerRef}>
         <header className={`headline ${isHeaderVisible ? "fadeIn" : ""}`}>
+          <Lottie
+            loop
+            animationData={lottieCircle}
+            play
+            className="lottieCircle2"
+          />
           <h2>Featured Projects</h2>
           <p className="main">Take a look at my portfolio</p>
         </header>

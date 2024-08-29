@@ -1,6 +1,9 @@
 import React from "react";
-import { FaGithub, FaFolder, FaExternalLinkAlt } from "react-icons/fa";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
+import Lottie from "react-lottie-player";
+import lottieCircle from "../json/lottieCircle.json";
+import { FaGithub, FaFolder, FaExternalLinkAlt } from "react-icons/fa";
+
 import "../styles/OtherProjects.css";
 
 const ProjectCard = ({ title, description, tags, viewProject, codeLink }) => {
@@ -132,6 +135,12 @@ const OtherProjects = () => {
     <section className="projectsWrapper">
       <div className="headlineContainer" ref={headerRef}>
         <header className={`headline ${isHeaderVisible ? "fadeIn" : ""}`}>
+          <Lottie
+            loop
+            animationData={lottieCircle}
+            play
+            className="lottieCircle3"
+          />
           <h2>Other Projects</h2>
           <p className="main">More noteworthy projects to check out</p>
         </header>

@@ -1,7 +1,9 @@
 import React from "react";
-import "../styles/Experience.css";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
+import Lottie from "react-lottie-player";
+import lottieCircleAlt from "../json/lottieCircleAlt.json";
 import { FaBriefcase, FaGraduationCap } from "react-icons/fa";
+import "../styles/Experience.css";
 
 const TimelineItem = ({ title, company, institution, period }) => {
   const [itemRef, isVisible] = useIntersectionObserver({
@@ -72,8 +74,14 @@ const Experience = () => {
 
   return (
     <section id="experience" className="experience">
-      <div ref={headerRef}>
+      <div className="headlineContainer" ref={headerRef}>
         <header className={`headline ${isHeaderVisible ? "fadeIn" : ""}`}>
+          <Lottie
+            loop
+            animationData={lottieCircleAlt}
+            play
+            className="lottieCircle"
+          />
           <h2>Experience</h2>
           <p className="main">My work and education history</p>
         </header>

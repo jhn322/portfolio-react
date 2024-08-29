@@ -110,7 +110,7 @@
   max-width: min(100%, 70ch);
 }
 
-.lottieAnimation {
+.lottieHeader {
   width: 16rem;
   height: 16rem;
 }
@@ -151,7 +151,7 @@
     margin: 1.5rem 0;
   }
 
-  .lottieAnimation {
+  .lottieHeader {
     width: 22rem;
     height: 22rem;
     position: absolute;

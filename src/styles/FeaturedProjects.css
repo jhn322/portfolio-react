@@ -7,6 +7,7 @@
 }
 
 .featuredProjectsWrapper {
+  position: relative;
   padding: 6rem 1rem;
 }
 
