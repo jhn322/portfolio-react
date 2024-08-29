@@ -1,6 +1,6 @@
 *,
-*::before,
-*::after {
+::before,
+::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -19,16 +19,6 @@
     bottom: 25px;
     left: 1.3rem;
     z-index: 50;
-    animation: fadeIn 0.5s ease-in-out forwards;
-  }
-
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
   }
 
   .iconWrapper {
@@ -41,6 +31,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     width: 2.4rem;
     height: 2.4rem;
     text-decoration: none;
@@ -48,16 +39,49 @@
     border-radius: 12px;
     cursor: pointer;
     background-color: var(--accent-color);
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-bottom: 1rem;
   }
 
   .icon:hover {
     color: var(--text-color);
     background-color: var(--hover-color);
-    transform: scale(1.05) rotate(-5deg);
   }
 
-  .icon1 {
-    margin-bottom: 1rem;
+  .label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    left: calc(100% + 10px);
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--hover-color);
+    color: var(--text-color);
+    padding: 1rem;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    white-space: nowrap;
+    pointer-events: none;
+    animation: fadeIn 0.2s ease-out;
+  }
+
+  .labelText {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+
+  .subtext {
+    font-size: 0.9rem;
+    font-weight: lighter;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 }
