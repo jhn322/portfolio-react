@@ -37,7 +37,7 @@
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 25rem;
+  height: 46rem;
 }
 
 .custom-shape-divider-bottom-1724873734 .shape-fill {
@@ -121,6 +121,10 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .custom-shape-divider-bottom-1724873734 svg {
+    height: 25rem;
+  }
+
   .content {
     display: flex;
     flex-direction: row;

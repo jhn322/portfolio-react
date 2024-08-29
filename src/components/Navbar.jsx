@@ -104,6 +104,11 @@ const Navbar = () => {
             </li>
           )
         )}
+        <div className="navBtn">
+          <a href="/resume.docx" download>
+            <button>Resume</button>
+          </a>
+        </div>
         <div className="navIconsContainer">
           <a
             href="https://github.com/jhn322"
