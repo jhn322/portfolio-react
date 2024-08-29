@@ -143,6 +143,10 @@ li {
   padding-left: 2rem;
 }
 
+.navBtn button:hover {
+  background-color: var(--accent-color);
+}
+
 .navBtn button {
   background-color: transparent;
   border: 2px solid var(--accent-color);

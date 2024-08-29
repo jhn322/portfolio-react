@@ -7,7 +7,6 @@ import Experience from "./components/Experience";
 import FeaturedProjects from "./components/FeaturedProjects";
 import OtherProjects from "./components/OtherProjects";
 import Contact from "./components/Contact";
-import Footer from "./components/Footer";
 import ScrollUp from "./components/ScrollUp";
 import Icons from "./components/Icons";
 // import CircleBg from "./components/LottieCircle";
@@ -25,7 +24,6 @@ function App() {
         <FeaturedProjects />
         <OtherProjects />
         <Contact />
-        <Footer />
         <ScrollUp />
         <Icons />
       </main>
