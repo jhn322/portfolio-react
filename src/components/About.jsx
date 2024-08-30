@@ -100,8 +100,10 @@ const About = () => {
                 <span className="value">Umeå</span>
               </li>
               <li className="infoItem">
-                <span className="label">Hobbies:</span>
-                <span className="value">Tech, TV, Gaming, Servers, Music</span>
+                <span className="label">Interests:</span>
+                <span className="value">
+                  Tech, TV/Movies, Gaming, Servers, Music
+                </span>
               </li>
               <li className="infoItem">
                 <span className="label">Email:</span>
@@ -115,10 +117,6 @@ const About = () => {
                     style={{ marginLeft: "0.5rem", verticalAlign: "middle" }}
                   />
                 </span>
-              </li>
-              <li className="infoItem">
-                <span className="label">Phone:</span>
-                <span className="value">073 - 029 33 92</span>
               </li>
             </ul>
           </div>

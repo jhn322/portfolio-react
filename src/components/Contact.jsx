@@ -111,8 +111,8 @@ const Contact = () => {
                   </span>
                 </li>
                 <li className="infoItem">
-                  <span className="label">Phone:</span>
-                  <span className="value">073 - 029 33 92</span>
+                  <span className="label">Reply:</span>
+                  <span className="value">Within 24 hours</span>
                 </li>
               </ul>
             </address>

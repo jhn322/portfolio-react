@@ -167,7 +167,7 @@ button:hover {
 .lottieBubble2,
 .lottieBubble3 {
   position: absolute;
-  left: 50%;
+  left: 20%;
   top: 50%;
   width: 100%;
   max-width: 35rem;
