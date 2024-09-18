@@ -136,25 +136,24 @@ const Skills = () => {
         <article className="infoContainer">
           <h3 className="infoHeadline">About My Abilities</h3>
           <p className="info">
-            With a new-found passion in both front-end and back-end development,
-            I am looking to improve my skills across a diverse range of
-            technologies and tools. My growing knowledge in{" "}
-            <strong>React</strong> allows me to build dynamic and responsive
-            user web apps, while my proficiency in TypeScript and{" "}
-            <strong>JavaScript</strong> also benefits. My journey in software
-            development is complemented by a significant hobby interest in tech.
-            I use <strong>Docker</strong> daily to seamlessly containerize and
-            deploy on a server(s). I am ample at <strong>GIT</strong>, ensuring
-            smooth collaboration and code management. My understanding of
-            back-end enhances my ability to work on server-side applications,
-            providing a full-stack development perspective. <br /> <br /> Beyond
-            programming, I prefer to be creative with tools like{" "}
-            <strong>Photoshop</strong> for designing visuals or{" "}
-            <strong>Sony Vegas</strong> for video editing. My knowledge of{" "}
-            <strong>Linux</strong> systems demonstrates my ability to navigate
-            and manage various operating systems effectively. Over the years, I
-            am continuously looking to improve my skills and embrace new
-            frameworks.
+            With a new-found passion in web development, I am looking to improve
+            my skills across a diverse range of technologies and tools. My
+            growing knowledge in <strong>React</strong> allows me to build
+            dynamic and responsive user web apps, while my proficiency in{" "}
+            <strong>TypeScript</strong> and <strong>JavaScript</strong> also
+            benefits. My journey in software development is complemented by a
+            significant hobby interest in tech. I use <strong>Docker</strong>{" "}
+            daily to seamlessly containerize and deploy on a server(s). I am
+            ample at <strong>GIT</strong>, ensuring smooth collaboration and
+            code management. My understanding of back-end enhances my ability to
+            work on server-side applications, providing a full-stack development
+            perspective. <br /> <br /> Beyond programming, I have a big passion
+            in creative design with tools like <strong>Photoshop</strong> for
+            designing visuals and <strong>Sony Vegas</strong> for video editing.
+            My knowledge of <strong>Linux</strong> systems demonstrates my
+            ability to navigate and manage various operating systems
+            effectively. Over the years, I am continuously looking to improve my
+            skills and embrace new frameworks.
           </p>
           <div className="technologiesSection">
             <h4>Some technologies I have been working with recently</h4>

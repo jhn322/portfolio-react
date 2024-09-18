@@ -6,7 +6,14 @@ import { FaGithub, FaFolder, FaExternalLinkAlt } from "react-icons/fa";
 
 import "../styles/OtherProjects.css";
 
-const ProjectCard = ({ title, description, tags, viewProject, codeLink }) => {
+const ProjectCard = ({
+  title,
+  description,
+  tags,
+  viewProject,
+  codeLink,
+  isPassionProject,
+}) => {
   const [cardRef, isVisible] = useIntersectionObserver({
     threshold: 0.2,
     once: true,
@@ -29,6 +36,9 @@ const ProjectCard = ({ title, description, tags, viewProject, codeLink }) => {
       tabIndex={0}
       aria-label={`View project: ${title}`}
     >
+      {isPassionProject && (
+        <span className="projectLabel">Passion Project</span>
+      )}
       <div className="projectIcons">
         <FaFolder className="folderIcon" />
       </div>
@@ -75,7 +85,7 @@ const OtherProjects = () => {
     {
       title: "Kometa Config",
       description:
-        "Kometa is a powerful tool designed to give you complete control over your media libraries. With Kometa, you can take your customization to the next level, with granular control over metadata, collections, overlays, and much more. This is my tailor made config with an endless amount of time spent creating and perfecting every detail.",
+        "Kometa is a powerful tool designed to give you complete control over your media libraries. With Kometa, you have granular control over metadata, collections, overlays, and much more. This is my config with a large amount of self designed posters, icon overlays and custom made collection in every detail.",
       tags: [
         "Python",
         "Docker",
@@ -88,6 +98,7 @@ const OtherProjects = () => {
       ],
       viewProject: "https://kometa.wiki/en/latest/",
       codeLink: "https://github.com/jhn322/kometa-config",
+      isPassionProject: true,
     },
     {
       title: "Kanban Board",

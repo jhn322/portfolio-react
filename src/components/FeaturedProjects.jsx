@@ -16,6 +16,7 @@ const ProjectCard = ({
   tags,
   viewProject,
   codeLink,
+  isPersonalProject,
 }) => {
   const [cardRef, isVisible] = useIntersectionObserver({
     threshold: 0.2,
@@ -39,11 +40,16 @@ const ProjectCard = ({
       tabIndex={0}
       aria-label={`View project: ${title}`}
     >
-      <img
-        src={imageUrl}
-        alt={`Screenshot of ${title}`}
-        className="projectImage"
-      />
+      <div className="imageContainer">
+        {isPersonalProject && (
+          <div className="projectLabel">Personal Project</div>
+        )}
+        <img
+          src={imageUrl}
+          alt={`Screenshot of ${title}`}
+          className="projectImage"
+        />
+      </div>
       <div className="featuredProjectContent">
         <h3 className="featuredProjectTitle">{title}</h3>
         <p className="featuredProjectDescription">{description}</p>
@@ -102,6 +108,7 @@ const FeaturedProjects = () => {
       ],
       viewProject: "https://jhn-holmsund-information.netlify.app/",
       codeLink: "https://github.com/jhn322/holmsund-information",
+      isPersonalProject: true,
     },
     {
       title: "Kanban Group Project",

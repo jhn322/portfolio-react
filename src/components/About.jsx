@@ -101,9 +101,7 @@ const About = () => {
               </li>
               <li className="infoItem">
                 <span className="label">Interests:</span>
-                <span className="value">
-                  Tech, TV/Movies, Gaming, Servers, Music
-                </span>
+                <span className="value">Tech, Media, Gaming, Editing</span>
               </li>
               <li className="infoItem">
                 <span className="label">Email:</span>
