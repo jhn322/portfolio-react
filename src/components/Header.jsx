@@ -6,8 +6,8 @@ import "../styles/Header.css";
 const Header = () => {
   const phrases = [
     "Web Developer.",
+    "Creative Designer.",
     "Media Enthusiast.",
-    "Photo & Video Editing.",
     "Linux & Docker Deployment.",
   ];
 
