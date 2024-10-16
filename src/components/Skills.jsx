@@ -10,6 +10,7 @@ const getCurrentDate = () => {
 
 const skills = [
   { skill: "React", startYear: 2024, startMonth: 3 },
+  { skill: "Next.js", startYear: 2024, startMonth: 9 },
   { skill: "GIT", startYear: 2023, startMonth: 10 },
   { skill: "TypeScript", startYear: 2023, startMonth: 12 },
   { skill: "JavaScript", startYear: 2023, startMonth: 9 },
@@ -20,6 +21,7 @@ const skills = [
   { skill: "Vue.js", startYear: 2024, startMonth: 11 },
   { skill: "Docker", startYear: 2020, startMonth: 1 },
   { skill: "Photoshop", startYear: 2011, startMonth: 3 },
+  { skill: "Figma", startYear: 2024, startMonth: 3 },
   { skill: "Linux", startYear: 2018, startMonth: 3 },
   { skill: "Kometa", startYear: 2021, startMonth: 1 },
   { skill: "Sony Vegas", startYear: 2011, startMonth: 3 },
@@ -33,14 +35,14 @@ const technologiesList1 = [
   { name: "GIT", icon: <FaFire /> },
   { name: "Figma", icon: <FaFire /> },
   { name: "Docker", icon: <FaFire /> },
-  { name: "WhisperAI", icon: <FaFire /> },
+  { name: "Next.js", icon: <FaFire /> },
 ];
 
 const technologiesList2 = [
   { name: "Node.js", icon: <FaFire /> },
   { name: "Express", icon: <FaFire /> },
   { name: "MongoDB", icon: <FaFire /> },
-  { name: "Postman", icon: <FaFire /> },
+  { name: "WhisperAI", icon: <FaFire /> },
   { name: "TailWindCSS", icon: <FaFire /> },
   { name: "SQL", icon: <FaFire /> },
   { name: "GraphQL", icon: <FaFire /> },
@@ -69,12 +71,11 @@ const Skills = () => {
   }, []);
 
   const skillPriority = {
-    JavaScript: 4,
-    TypeScript: 4,
-    React: 3,
+    Figma: 3,
     "Node.JS": 2,
     Express: 2,
     TailWindCSS: 1,
+    "Next.js": 0,
     "Vue.js": 0,
   };
 
