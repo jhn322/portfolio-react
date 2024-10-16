@@ -1,7 +1,9 @@
 import { useState } from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import { RxExternalLink } from "react-icons/rx";
-import profilePic from "../assets/pfp.jpg";
+import { FaExchangeAlt } from "react-icons/fa";
+import profilePic from "../assets/pfp.png";
+import secondaryProfilePic from "../assets/pfp2.jpg";
 import "../styles/About.css";
 
 // Calculate my age
@@ -32,6 +34,7 @@ const About = () => {
   });
 
   const [transform, setTransform] = useState("translate(0, 0)");
+  const [isSecondaryPic, setIsSecondaryPic] = useState(false);
 
   const handleMouseMove = (e) => {
     const { clientX: mouseX, clientY: mouseY } = e;
@@ -54,6 +57,10 @@ const About = () => {
     setTransform("translate(0, 0)");
   };
 
+  const toggleProfilePic = () => {
+    setIsSecondaryPic((prev) => !prev);
+  };
+
   const age = calculateAge("1996-05-02");
 
   return (
@@ -70,12 +77,24 @@ const About = () => {
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
         >
-          <img
-            src={profilePic}
-            alt="A profile Picture"
-            className="profilePic"
-            style={{ transform }}
-          />
+          <div className="profileWrapper">
+            <img
+              src={isSecondaryPic ? secondaryProfilePic : profilePic}
+              alt="Profile Picture"
+              className="profilePic"
+              style={{ transform }}
+            />
+            <button
+              onClick={toggleProfilePic}
+              className="profilePicToggle"
+              aria-label="Toggle profile picture"
+              style={{
+                transform,
+              }}
+            >
+              <FaExchangeAlt />
+            </button>
+          </div>
         </div>
         <div className="contentContainer">
           <h3 className="infoHeadline">

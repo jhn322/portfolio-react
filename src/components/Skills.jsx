@@ -15,7 +15,6 @@ const skills = [
   { skill: "TypeScript", startYear: 2023, startMonth: 12 },
   { skill: "JavaScript", startYear: 2023, startMonth: 9 },
   { skill: "HTML & CSS", startYear: 2023, startMonth: 9 },
-  { skill: "Node.JS", startYear: 2024, startMonth: 5 },
   { skill: "Express", startYear: 2024, startMonth: 5 },
   { skill: "TailWindCSS", startYear: 2024, startMonth: 7 },
   { skill: "Vue.js", startYear: 2024, startMonth: 11 },
@@ -40,7 +39,7 @@ const technologiesList1 = [
 
 const technologiesList2 = [
   { name: "Node.js", icon: <FaFire /> },
-  { name: "Express", icon: <FaFire /> },
+  { name: "Prisma", icon: <FaFire /> },
   { name: "MongoDB", icon: <FaFire /> },
   { name: "WhisperAI", icon: <FaFire /> },
   { name: "TailWindCSS", icon: <FaFire /> },
@@ -72,7 +71,6 @@ const Skills = () => {
 
   const skillPriority = {
     Figma: 3,
-    "Node.JS": 2,
     Express: 2,
     TailWindCSS: 1,
     "Next.js": 0,
