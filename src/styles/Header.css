@@ -6,10 +6,18 @@
   padding: 0;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 .header {
   position: relative;
   z-index: 1;
   overflow: hidden;
+  width: 100vw;
   background: linear-gradient(
     180deg,
     #2b0505,
