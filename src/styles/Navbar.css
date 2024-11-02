@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *,
 ::before,
 ::after {
@@ -239,3 +240,263 @@ li {
     display: none;
   }
 }
+=======
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 5rem;
+  width: 92%;
+  max-width: 80rem;
+  border-radius: 15px;
+  z-index: 100000;
+  margin-top: 1rem;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-color: var(--nav-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 0.3rem 0 0 0.7rem;
+  transition: border-radius 0.5s ease-in-out;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navLogo {
+  height: 3.5rem;
+  width: auto;
+}
+
+.menuIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  cursor: pointer;
+  transform: translateY(-50%);
+  z-index: 1001;
+}
+
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 500ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+
+.line {
+  fill: none;
+  transition: stroke-dasharray 500ms, stroke-dashoffset 500ms;
+  stroke: var(--text-color);
+  stroke-width: 5.5;
+  stroke-linecap: butt;
+}
+
+.ham1 .top {
+  stroke-dasharray: 40 139;
+}
+
+.ham1 .bottom {
+  stroke-dasharray: 40 180;
+}
+
+.ham1.active .top {
+  stroke-dashoffset: -98px;
+}
+
+.ham1.active .bottom {
+  stroke-dashoffset: -138px;
+}
+
+ul.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  list-style-type: none;
+  border-radius: 15px;
+  padding: 0;
+  background-color: var(--nav-menu);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out,
+    border-radius 0.5s ease-in-out;
+}
+
+ul.open {
+  max-height: 1000px;
+  padding: 2rem 0;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+ul.closed {
+  max-height: 0;
+  padding: 0;
+  border-radius: 15px;
+}
+
+li {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.navList {
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.navItem {
+  font-size: 1.6rem;
+  display: inline-block;
+  width: 100%;
+  padding: 0 1rem;
+  transition: color 0.2s ease;
+}
+
+.navItem:hover {
+  color: var(--text-color);
+}
+
+.navBtn {
+  padding-left: 2rem;
+}
+
+.navBtn button:hover {
+  background-color: var(--accent-color);
+}
+
+.navBtn button {
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+}
+
+.navIconsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.6rem 2.1rem;
+}
+
+.navIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  text-decoration: none;
+  padding: 0.4rem;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: var(--accent-color);
+  transition: background-color 0.2s ease;
+}
+
+.navIcon:hover {
+  color: var(--text-color);
+  background-color: var(--hover-color);
+}
+
+@media (min-width: 1200px) {
+  nav {
+    border-radius: 15px;
+    border-bottom: none;
+  }
+
+  nav.wideScreen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    height: 5rem;
+  }
+
+  .menuIcon {
+    display: none;
+  }
+
+  ul.menu.wideScreenMenu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: static;
+    max-height: none;
+    background-color: transparent;
+    overflow: visible;
+    flex-grow: 1;
+  }
+
+  ul.menu.wideScreenMenu li {
+    width: auto;
+    margin: 0 1rem;
+  }
+
+  .navList {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .navItem {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    padding: 0;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+  }
+
+  .navItem::after {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.2s ease, left 0.2s ease;
+  }
+
+  .navItem:hover::after {
+    width: 100%;
+    left: 0;
+  }
+
+  .navBtn {
+    padding-left: 1rem;
+  }
+
+  .logoContainer {
+    flex-shrink: 0;
+  }
+
+  .navIconsContainer {
+    display: none;
+  }
+}
+>>>>>>> 4f655f661172c1687ca6a3c63951be4057c0de27

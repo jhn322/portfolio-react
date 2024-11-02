@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *,
 ::before,
 ::after {
@@ -153,3 +154,187 @@ body {
     margin-top: 1.5rem;
   }
 }
+=======
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  width: 100vw;
+  background: linear-gradient(
+    180deg,
+    #2b0505,
+    #570a0a,
+    #750e0e,
+    rgb(119, 14, 14)
+  );
+}
+
+.header h3 {
+  color: var(--accent-color);
+}
+
+.custom-shape-divider-bottom-1724873734 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1724873734 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 46rem;
+}
+
+.custom-shape-divider-bottom-1724873734 .shape-fill {
+  fill: var(--bg-color);
+}
+
+.content {
+  position: relative;
+  text-align: left;
+  color: var(--text-color);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 4rem 1rem;
+}
+
+.content h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  line-height: 4rem;
+}
+
+.contentWrapper {
+  max-width: 69rem;
+  position: relative;
+}
+
+.textContainer {
+  margin: 6rem 0 2rem 0;
+}
+
+.typewriterContainer {
+  font-size: 1.6rem;
+  margin: 0.6rem 0 0;
+  padding: 0;
+  height: 1.5em;
+  line-height: 1.5em;
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  font-weight: 500;
+  border-right: 0.15em solid var(--text-color);
+  white-space: nowrap;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--text-color);
+  }
+}
+
+.text,
+.headerBtn {
+  margin-top: 1.5rem;
+  font-weight: 400;
+}
+
+.responsiveText {
+  max-width: min(100%, 70ch);
+}
+
+.lottieHeader {
+  width: 16rem;
+  height: 16rem;
+}
+
+.headerBtn button {
+  padding: 1.4rem 2rem;
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .custom-shape-divider-bottom-1724873734 svg {
+    height: 25rem;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 3rem;
+  }
+
+  .content h1 {
+    font-size: 3.5rem;
+  }
+
+  .contentWrapper {
+    margin-top: 0;
+  }
+
+  .textContainer {
+    position: relative;
+    z-index: 2;
+  }
+
+  .typewriterContainer {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+  }
+
+  .lottieHeader {
+    width: 22rem;
+    height: 22rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .text {
+    max-width: 60%;
+    font-size: 1.1rem;
+  }
+
+  .headerBtn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 1.5rem;
+  }
+}
+>>>>>>> 4f655f661172c1687ca6a3c63951be4057c0de27

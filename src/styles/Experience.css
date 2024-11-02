@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *,
 ::before,
 ::after {
@@ -118,3 +119,125 @@
     justify-content: center;
   }
 }
+=======
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.experience {
+  padding: 6rem 1rem;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.historyContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.experienceSection {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.experienceSection:hover {
+  transform: translateY(-10px);
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.employIcon {
+  font-size: 1.6rem;
+}
+
+.schoolIcon {
+  font-size: 2rem;
+}
+
+.timeline {
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--accent-color);
+}
+
+.timelineItem {
+  padding-left: 2rem;
+  position: relative;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.timelineItem.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timelineItem::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
+
+.timelineItem h3 {
+  margin-bottom: 0.5rem;
+}
+
+.timelineItem .company,
+.timelineItem .institution {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.timelineItem .period {
+  color: var(--text-grey-color);
+}
+
+/* Medium screens */
+@media (min-width: 559px) and (max-width: 1023px) {
+  .historyContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+
+/* Bigger screens */
+@media (min-width: 1024px) {
+  .experience {
+    padding: 6rem 3rem;
+  }
+
+  .historyContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+>>>>>>> 4f655f661172c1687ca6a3c63951be4057c0de27

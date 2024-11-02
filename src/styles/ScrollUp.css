@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *,
 ::before,
 ::after {
@@ -35,3 +36,48 @@
   background-color: var(--nav-color);
   transform: scale(1.1);
 }
+=======
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.scrollUp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: fixed;
+  bottom: 25px;
+  right: 1.3rem;
+  background-color: var(--accent-color);
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0.2rem;
+  border-radius: 12px;
+  z-index: 21;
+  opacity: 0;
+  visibility: hidden;
+  transition: background-color 0.2s ease, opacity 0.2s ease,
+    visibility 0.2s ease, transform 0.2s ease;
+}
+
+.scrollUp.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scrollUp:hover {
+  background-color: var(--hover-color);
+  transform: scale(1.05);
+}
+
+.scrollIcon {
+  height: 2.4rem;
+  width: 2.4rem;
+  padding: 0.2rem;
+}
+>>>>>>> 4f655f661172c1687ca6a3c63951be4057c0de27

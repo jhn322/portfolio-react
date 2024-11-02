@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *,
 *::before,
 *::after {
@@ -61,3 +62,92 @@
     margin-bottom: 1rem;
   }
 }
+=======
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.iconContainer {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .iconContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 25px;
+    left: 1.3rem;
+    z-index: 50;
+  }
+
+  .iconWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 2.4rem;
+    height: 2.4rem;
+    text-decoration: none;
+    padding: 0.4rem;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: var(--accent-color);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-bottom: 1rem;
+  }
+
+  .icon:hover {
+    color: var(--text-color);
+    background-color: var(--hover-color);
+  }
+
+  .iconLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    left: calc(100% + 10px);
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--hover-color);
+    color: var(--text-color);
+    padding: 1rem;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    white-space: nowrap;
+    pointer-events: none;
+    animation: fadeIn 0.2s ease-out;
+  }
+
+  .labelText {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+
+  .subtext {
+    font-size: 0.9rem;
+    font-weight: lighter;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+>>>>>>> 4f655f661172c1687ca6a3c63951be4057c0de27

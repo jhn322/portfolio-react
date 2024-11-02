@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *,
 ::before,
 ::after {
@@ -131,3 +132,138 @@
     flex: 2;
   }
 }
+=======
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Assistant", sans-serif;
+}
+
+.skillsContainer {
+  margin: 0 auto;
+  padding: 6rem 1rem;
+}
+
+.skillItem {
+  margin-bottom: 1rem;
+}
+
+.skillInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+
+.info {
+  margin-bottom: 2rem;
+}
+
+.skillName {
+  font-weight: bold;
+}
+
+.skillYears {
+  font-size: 0.9em;
+  color: var(--text-grey-color);
+}
+
+.skillBarContainer {
+  background-color: var(--text-color);
+  height: 1.2rem;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skillBar {
+  background-color: var(--accent-color);
+  height: 100%;
+  width: 0;
+  transition: width 4s ease-out;
+}
+
+.skillPercentage {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9em;
+  font-weight: bold;
+  color: var(--bg-color);
+}
+
+.technologiesSection h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.technologiesContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.technologiesList {
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.technologiesList:last-child {
+  margin-right: 0;
+}
+
+.technologiesList h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.technologiesList ul {
+  list-style: none;
+  padding: 0;
+}
+
+.technologiesList li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.technologiesList li svg {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--accent-color);
+}
+
+/* Bigger screens */
+@media (min-width: 1024px) {
+  .headlineContainer {
+    max-width: 69rem;
+    margin: 0 auto;
+  }
+
+  .skillsContainer {
+    padding: 6rem 3rem;
+  }
+
+  .innerContainer {
+    margin: 0 auto;
+    max-width: 69rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .infoContainer {
+    max-width: 25rem;
+    margin-right: 4rem;
+  }
+
+  .skillItemsWrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+  }
+}
+>>>>>>> 4f655f661172c1687ca6a3c63951be4057c0de27
