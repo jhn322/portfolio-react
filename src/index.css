@@ -1,3 +1,163 @@
+<<<<<<< HEAD
+:root {
+  font-family: "Archivo", sans-serif;
+  line-height: 1.5;
+  font-weight: 300;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  --bg-color: #030303;
+  --bg-grey-color: #060606;
+  --nav-color: #300404;
+  --nav-transparent: rgba(48, 4, 4, 0.8);
+  --border-color: #101010;
+  --text-color: #f0f0f0;
+  --text-grey-color: #d1d1d1;
+  --accent-color: #bd6212;
+}
+
+a {
+  font-weight: 500;
+  color: var(--text-color);
+  text-decoration: inherit;
+  font-family: "Archivo", sans-serif;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+body {
+  place-items: center;
+  min-width: 20rem;
+  min-height: 100vh;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--text-color);
+  font-weight: 600;
+  font-family: "Archivo", sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 0.8rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+p {
+  color: var(--text-color);
+  margin-bottom: 0.8rem;
+  font-family: "Noto Sans", sans-serif;
+}
+
+span {
+  font-family: "Archivo", sans-serif;
+}
+
+button {
+  border-radius: 12px;
+  border: 1px solid transparent;
+  margin: 0.4rem 0;
+  padding: 0.8rem 1.4rem;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: var(--accent-color);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: var(--nav-color);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+  border-radius: 0.7rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--nav-color);
+  border-radius: 0.7rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--nav-color);
+}
+
+/* Every components header */
+.headline {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.headline.fadeIn {
+  opacity: 1;
+}
+
+.headline h2 {
+  line-height: 3.5rem;
+}
+
+.headline p {
+  margin-top: 0.6rem;
+}
+
+.fadeIn {
+  animation: fadeInAnimation 0.5s ease-out forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    transform: translateX(60px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Experience timeline & Project Cards */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+=======
 :root {
   font-family: "Archivo", sans-serif;
   line-height: 1.5;
@@ -197,3 +357,4 @@ button:hover {
     left: 0;
   }
 }
+>>>>>>> 4f655f661172c1687ca6a3c63951be4057c0de27
