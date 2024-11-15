@@ -6,9 +6,9 @@ import "../styles/Header.css";
 const Header = () => {
   const phrases = [
     "Web Developer.",
-    "Creative Designer.",
+    "UI-Designer.",
     "Media Enthusiast.",
-    "Linux & Docker Deployment.",
+    "Linux & Docker Tinkerer.",
   ];
 
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
