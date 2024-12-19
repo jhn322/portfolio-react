@@ -8,6 +8,7 @@ import project1 from "../assets/project1.png";
 import project2 from "../assets/project2.png";
 import project3 from "../assets/project3.png";
 import project4 from "../assets/project4.png";
+import project5 from "../assets/project5.png";
 
 const ProjectCard = ({
   title,
@@ -111,10 +112,29 @@ const FeaturedProjects = () => {
       isPersonalProject: true,
     },
     {
+      title: "Rently",
+      description:
+        "Rently is a heartwarming answer to overconsumption and unnecessary waste. Why buy when you can rent? By connecting neighbors, friends, and local communities, we’ve created a space where stuff gets used, not wasted. Got a power drill collecting dust? Rent it out to someone who’s fixing their shelf. Need a tent for that one camping trip? Rent it from your neighbor instead of shelling out cash for a new one.",
+      imageUrl: project2,
+      tags: [
+        "Vue.js",
+        "Store",
+        "SFC",
+        "Search",
+        "Dashboard",
+        "User management",
+        "Pinia",
+        "JSONBin",
+        "Toastify",
+      ],
+      viewProject: "https://rently-app.netlify.app/",
+      codeLink: "https://github.com/Regni/rently.git",
+    },
+    {
       title: "Kanban Group Project",
       description:
         "A weeks-long group project leveraging GIT collaboration while coding in React with Redux to develop a highly functional Kanban board for effective planning. This project enables users to create and manage tasks with ease, including features for setting due dates, deadlines, and assigning team members. Also, users can move cards between columns to track progress and organize tasks efficiently. This Kanban board is designed to enhance productivity and streamline project management.",
-      imageUrl: project2,
+      imageUrl: project3,
       tags: [
         "React",
         "Redux",
@@ -131,7 +151,7 @@ const FeaturedProjects = () => {
       title: "The Dashboard",
       description:
         "An aesthetically pleasing dashboard designed to be your go-to landing page for bookmarking and organizing links you want to save for later. This interface provides a quick overview of the weather, so you can stay informed at a glance. Also, it features a convenient note-taking section where you can write down important information or reminders. Your notes are automatically saved and persist across visits. This dashboard combines functionality with a sleek design.",
-      imageUrl: project3,
+      imageUrl: project4,
       tags: ["JavaScript", "CSS", "API", "Randomizer", "Google Analytics"],
       viewProject: "https://jhn-dashboard.netlify.app/",
       codeLink: "https://github.com/jhn322/dashboard-frontend",
@@ -140,7 +160,7 @@ const FeaturedProjects = () => {
       title: "Quire",
       description:
         "A digital assistant designed for creating, saving, and editing everyday notes with ease. Whether you need to write down a quick reminder for the next day or develop a detailed chapter for a creative project, Quire is here to support you. Its intuitive interface allows for seamless note-taking and organization, ensuring your ideas and tasks are always at your fingertips.",
-      imageUrl: project4,
+      imageUrl: project5,
       tags: [
         "JavaScript",
         "CSS",
