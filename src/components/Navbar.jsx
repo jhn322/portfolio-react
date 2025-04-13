@@ -90,20 +90,19 @@ const Navbar = () => {
           isWideScreen ? "wideScreenMenu" : ""
         }`}
       >
-        {["Home", "About", "Skills", "Experience", "Projects", "Contact"].map(
-          (item) => (
-            <li key={item} className="navList">
-              <a
-                href={`#${item.toLowerCase()}`}
-                className="navItem"
-                onClick={handleScroll}
-                aria-label={`Navigate to ${item}`}
-              >
-                {item}
-              </a>
-            </li>
-          )
-        )}
+        {/* Add "Experience" for that section" */}
+        {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
+          <li key={item} className="navList">
+            <a
+              href={`#${item.toLowerCase()}`}
+              className="navItem"
+              onClick={handleScroll}
+              aria-label={`Navigate to ${item}`}
+            >
+              {item}
+            </a>
+          </li>
+        ))}
         <div className="navBtn">
           <a href="/resume.docx" download>
             <button>Resume</button>
